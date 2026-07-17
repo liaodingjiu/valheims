@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Valheim Guides</title>
+<meta name="description" content="Contact Valheim Guides. Get in touch for questions, corrections, or collaboration.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://valheims.com/contact.html">
+<link rel="stylesheet" href="shared.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://valheims.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://valheims.com/contact.html" }
+  ]
+}
+</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xny2nxsdez");
+</script>
+</head>
+<body>
+
+<div class="top-bar">
+  Valheim Guides — Contact Us
+</div>
+
+<nav aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Valheim<span>Guides</span></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="boss-order.html">Boss Order</a></li>
+        <li><a href="best-weapons.html">Best Weapons</a></li>
+        <li><a href="building-guide.html">Base Building</a></li>
+        <li><a href="biome-guide.html">Biome Guide</a></li>
+        <li><a href="beginner-guide.html">Beginner Guide</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="sun">☀️</span>
+        <span class="moon">🌙</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Home</a> &raquo; <span>Contact</span>
+</nav>
+
+<section class="hero">
+  <h1>Contact Us</h1>
+  <p>Have a question, found an error, or want to collaborate? We'd love to hear from you.</p>
+</section>
+
+<div class="prose">
+
+<h2>Get in Touch</h2>
+
+<p>If you spot a mistake in one of our guides, have a suggestion for new content, or want to discuss advertising or collaboration opportunities, please reach out. Here are the best ways to contact us:</p>
+
+<h3>Get in Touch</h3>
+<p>For content corrections, guide suggestions, advertising, or partnership inquiries, please email:</p>
+<p><strong>📧 alex@valheims.com</strong></p>
+
+<h3>Response Time</h3>
+<p>We aim to respond to all emails within 48 hours. During game update weeks, response times may be slightly longer as we prioritize updating guides.</p>
+
+<h2>Before You Email</h2>
+<ul>
+  <li>If you're asking a gameplay question, check our <a href="beginner-guide.html">Beginner Guide</a> or <a href="index.html">other guides</a> — your answer may already be there!</li>
+  <li>For bugs or technical issues with Valheim, please use the <a href="https://valheim.com/support" rel="noopener noreferrer">official Valheim support</a> — we're just a fan guide site.</li>
+  <li>For mod-related questions, check the mod's page on <a href="https://thunderstore.io/c/valheim/" rel="noopener noreferrer">Thunderstore</a>.</li>
+</ul>
+
+</div>
+</main>
+
+<footer>
+  <p>Valheim Guides — The independent Valheim resource. Not affiliated with Iron Gate Studio.</p>
+  <p style="margin-top:8px">Valheim and all related content are trademarks of Iron Gate Studio AB.</p>
+  <p style="margin-top:8px">
+    <a href="about.html">About</a> &nbsp;|&nbsp;
+    <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp;
+    <a href="terms.html">Terms of Use</a> &nbsp;|&nbsp;
+    <a href="contact.html">Contact</a> &nbsp;|&nbsp;
+    <a href="sitemap.xml">Sitemap</a>
+  </p>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Back to top" title="Back to top">↑</button>
+<script src="cookie-consent.js"></script>
+<script>
+(function() {
+  var toggle = document.getElementById('themeToggle');
+  var stored = localStorage.getItem('valheim-theme');
+  if (stored) document.documentElement.setAttribute('data-theme', stored);
+  toggle.addEventListener('click', function() {
+    var current = document.documentElement.getAttribute('data-theme');
+    var next = (current === 'dark') ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('valheim-theme', next);
+  });
+  var btn = document.getElementById('backTop');
+  window.addEventListener('scroll', function() {
+    btn.style.display = window.scrollY > 400 ? 'flex' : 'none';
+  });
+  btn.addEventListener('click', function() { window.scrollTo({top: 0, behavior: 'smooth'}); });
+})();
+</script>
+</body>
+</html>

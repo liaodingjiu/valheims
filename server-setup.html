@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valheim Dedicated Server Setup Guide 2026 — Windows, Linux &amp; Docker | Valheim Guides</title>
+<meta name="description" content="Complete Valheim dedicated server setup guide. Step-by-step for Windows, Linux (Ubuntu + SteamCMD), and Docker. Port forwarding, crossplay configuration, admin commands, world management, and server hosting tips.">
+<meta name="keywords" content="Valheim server setup, Valheim dedicated server, Valheim server hosting, Valheim port forwarding, Valheim SteamCMD, Valheim Docker server, Valheim crossplay, Valheim admin commands">
+<meta name="robots" content="index, follow"><link rel="canonical" href="https://valheims.com/server-setup.html"><link rel="stylesheet" href="shared.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Valheim Dedicated Server Setup Guide 2026 — Windows, Linux & Docker","description":"Complete Valheim dedicated server setup guide with step-by-step instructions for Windows, Linux, and Docker, plus port forwarding, crossplay, and admin commands.","author":{"@type":"Organization","name":"Valheim Guides"},"datePublished":"2026-07-17","publisher":{"@type":"Organization","name":"Valheim Guides"},"mainEntityOfPage":"https://valheims.com/server-setup.html"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://valheims.com/"},{"@type":"ListItem","position":2,"name":"Server Setup","item":"https://valheims.com/server-setup.html"}]}</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xny2nxsdez");
+</script>
+</head>
+<body data-category="technical"><div class="top-bar">Valheim Complete Guide 2026 — Dedicated Server Setup. Updated <time datetime="2026-07-17">July 17, 2026</time>.</div>
+<nav aria-label="Main navigation"><div class="nav-inner"><a href="index.html" class="logo">Valheim<span>Guides</span></a><div class="nav-right"><ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li class="dropdown"><a href="guides-bosses.html">Bosses</a><ul class="dropdown-menu"><li><a href="boss-order.html">Boss Progression</a></li><li><a href="eikthyr-guide.html">Eikthyr</a></li><li><a href="elder-guide.html">The Elder</a></li><li><a href="bonemass-guide.html">Bonemass</a></li><li><a href="moder-guide.html">Moder</a></li><li><a href="yagluth-guide.html">Yagluth</a></li><li><a href="queen-guide.html">The Queen</a></li><li><a href="fader-guide.html">Fader</a></li></ul></li>
+<li class="dropdown"><a href="guides-equipment.html">Equipment</a><ul class="dropdown-menu"><li><a href="best-weapons.html">Best Weapons</a></li><li><a href="armor-guide.html">Armor Sets</a></li><li><a href="food-recipes.html">Food &amp; Cooking</a></li></ul></li>
+<li class="dropdown"><a href="guides-world.html">World</a><ul class="dropdown-menu"><li><a href="biome-guide.html">Biomes</a></li><li><a href="ashlands-guide.html">Ashlands</a></li><li><a href="deep-north-guide.html">Deep North</a></li><li><a href="sailing-guide.html">Sailing</a></li><li><a href="traders-guide.html">Traders</a></li><li><a href="farming-guide.html">Farming</a></li></ul></li>
+<li class="dropdown"><a href="guides-survival.html">Survival</a><ul class="dropdown-menu"><li><a href="building-guide.html">Base Building</a></li><li><a href="base-defense.html">Base Defense</a></li><li><a href="taming-guide.html">Taming</a></li><li><a href="beginner-guide.html">Beginner Guide</a></li></ul></li>
+<li class="dropdown"><a href="guides-technical.html">Technical</a><ul class="dropdown-menu"><li><a href="server-setup.html">Server Setup</a></li><li><a href="mods-guide.html">Mods</a></li><li><a href="console-commands.html">Commands</a></li><li><a href="multiplayer-guide.html">Multiplayer</a></li></ul></li>
+</ul><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><span class="sun">☀️</span><span class="moon">🌙</span></button></div></div></nav>
+<main class="container with-sidebar">
+<aside class="sidebar">
+  <h4>Technical &amp; Multiplayer</h4>
+  <ul>
+    <li><a href="server-setup.html">Dedicated Server Setup</a></li>
+    <li><a href="mods-guide.html">Mods &amp; BepInEx</a></li>
+    <li><a href="console-commands.html">Console Commands</a></li>
+    <li><a href="multiplayer-guide.html">Multiplayer Guide</a></li>
+  </ul>
+  <h4>Related</h4>
+  <ul>
+    <li><a href="sailing-guide.html">Sailing &amp; Boats &rarr;</a></li>
+    <li><a href="building-guide.html">Base Building &rarr;</a></li>
+    <li><a href="boss-order.html">Boss Progression &rarr;</a></li>
+  </ul>
+</aside>
+<article class="content-main"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> &raquo; <span>Server Setup</span></nav>
+<div class="ad-placeholder">[ AdSense Ad Unit — Responsive Leaderboard ]</div>
+<section class="hero"><h1>Valheim Dedicated Server Setup Guide 2026</h1><p>Host your own Valheim world 24/7. Step-by-step guides for Windows, Linux (Ubuntu + SteamCMD), and Docker. Includes port forwarding, crossplay config, admin commands, world management, automatic backups, and modded server setup.</p>
+<div class="hero-stats"><div class="hero-stat"><div class="val">3</div><div class="lbl">Setup Methods</div></div><div class="hero-stat"><div class="val">UDP</div><div class="lbl">Ports 2456-2458</div></div><div class="hero-stat"><div class="val">10</div><div class="lbl">Max Players</div></div><div class="hero-stat"><div class="val">4GB</div><div class="lbl">Min RAM</div></div></div></section>
+<nav class="toc"><h2>On This Page</h2><ol><li><a href="#requirements">System Requirements</a></li><li><a href="#windows">Windows Setup</a></li><li><a href="#linux">Linux Setup (SteamCMD + systemd)</a></li><li><a href="#docker">Docker Setup</a></li><li><a href="#ports">Port Forwarding &amp; Networking</a></li><li><a href="#crossplay">Crossplay Configuration</a></li><li><a href="#connecting">Connecting to Your Server</a></li><li><a href="#admin">Admin Commands &amp; Management</a></li><li><a href="#world">World &amp; Backup Management</a></li><li><a href="#mods">Modded Server Setup</a></li></ol></nav>
+
+<h2 id="requirements">1. System Requirements</h2>
+<div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
+<table><thead><tr><th>Resource</th><th>Minimum</th><th>Recommended</th></tr></thead><tbody>
+<tr><td><strong>CPU</strong></td><td>2 cores, 2.0 GHz</td><td>4-6 modern cores, strong single-thread</td></tr>
+<tr><td><strong>RAM</strong></td><td>4 GB</td><td>8-16 GB (especially modded)</td></tr>
+<tr><td><strong>Storage</strong></td><td>5 GB free</td><td>SSD/NVMe, 10+ GB free</td></tr>
+<tr><td><strong>Network</strong></td><td>2 Mbps upload</td><td>Wired Ethernet, 5+ Mbps upload</td></tr>
+<tr><td><strong>OS</strong></td><td>Windows 10/11, Linux (GLIBC ≥ 2.29)</td><td>Ubuntu 22.04, Windows Server 2022</td></tr>
+</tbody></table>
+
+<h2 id="windows">2. Windows Setup (Fastest Path)</h2>
+<ol><li>Open Steam → Library → Tools → search "Valheim Dedicated Server" → Install</li>
+<li>Browse local files, copy <code>start_headless_server.bat</code> → rename to <code>start_my_server.bat</code></li>
+<li>Edit the batch file with your settings:</li></ol>
+<pre style="background:var(--muted-bg);padding:16px;border-radius:8px;overflow-x:auto;font-size:13px">-name "MyValheimServer"
+-world "MyWorld"
+-port 2456
+-password "ChangeMe!"
+-public 1
+-savedir "D:\ValheimSaves"
+-saveinterval 900
+-backups 4</pre>
+<p><strong>Parameter Reference:</strong></p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>-name</code></td><td>Server display name</td></tr><tr><td><code>-port</code></td><td>UDP port (uses port and port+1)</td></tr><tr><td><code>-world</code></td><td>World save file name</td></tr><tr><td><code>-password</code></td><td>5+ characters, must differ from world name</td></tr><tr><td><code>-public</code></td><td>1 = listed publicly, 0 = private</td></tr><tr><td><code>-crossplay</code></td><td>Enable cross-platform (Steam + Xbox + MS Store)</td></tr><tr><td><code>-saveinterval</code></td><td>Auto-save interval in seconds (default 1800 = 30 min)</td></tr><tr><td><code>-backups</code></td><td>Number of rolling backups (default 4)</td></tr><tr><td><code>-preset</code></td><td>World modifier preset: Normal, Casual, Easy, Hard, Hardcore</td></tr></tbody></table>
+<p><strong>Run as a service (24/7):</strong> Use Task Scheduler → Create Task → Trigger at startup → Action: run your .bat file. Or use NSSM (Non-Sucking Service Manager) for a proper Windows service.</p>
+
+<h2 id="linux">3. Linux Setup (SteamCMD + systemd)</h2>
+<div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
+<pre style="background:var(--muted-bg);padding:16px;border-radius:8px;overflow-x:auto;font-size:13px"># Install dependencies
+apt update && apt install -y steamcmd libatomic1 libpulse0
+
+# Create valheim user
+useradd -r -m -d /opt/valheim -s /bin/bash valheim
+mkdir -p /opt/valheim/{server,saves}
+chown -R valheim:valheim /opt/valheim
+
+# Download server (App ID: 896660)
+/usr/games/steamcmd +login anonymous +force_install_dir /opt/valheim/server +app_update 896660 validate +quit</pre>
+<p>Create systemd service at <code>/etc/systemd/system/valheim.service</code>:</p>
+<pre style="background:var(--muted-bg);padding:16px;border-radius:8px;overflow-x:auto;font-size:13px">[Unit]
+Description=Valheim Server
+After=network.target
+
+[Service]
+User=valheim
+WorkingDirectory=/opt/valheim/server
+ExecStartPre=/usr/games/steamcmd +login anonymous +force_install_dir /opt/valheim/server +app_update 896660 +quit
+ExecStart=/opt/valheim/server/valheim_server.x86_64 \
+  -name "MyServer" -world "MyWorld" -port 2456 -password "ChangeMe!" \
+  -public 1 -savedir /opt/valheim/saves -saveinterval 900 -backups 4
+Restart=on-failure
+Environment=LD_LIBRARY_PATH=./linux64:$LD_LIBRARY_PATH
+LimitNOFILE=100000
+
+[Install]
+WantedBy=multi-user.target</pre>
+<p>Enable and start: <code>systemctl daemon-reload && systemctl enable --now valheim</code></p>
+
+<h2 id="docker">4. Docker Setup</h2>
+<pre style="background:var(--muted-bg);padding:16px;border-radius:8px;overflow-x:auto;font-size:13px">mkdir -p $HOME/valheim-server/{config,data}
+
+docker run -d --name valheim \
+  --cap-add=sys_nice --stop-timeout 120 \
+  -p 2456-2457:2456-2457/udp \
+  -v $HOME/valheim-server/config:/config \
+  -v $HOME/valheim-server/data:/opt/valheim \
+  -e SERVER_NAME="MyServer" \
+  -e WORLD_NAME="MyWorld" \
+  -e SERVER_PASS="ChangeMe!" \
+  -e SERVER_PUBLIC=true \
+  ghcr.io/lloesche/valheim-server:latest</pre>
+<p>Docker sidesteps GLIBC issues on older distros and makes updates portable.</p>
+
+<h2 id="ports">5. Port Forwarding &amp; Networking</h2>
+<div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
+<p><strong>UDP ports 2456-2458</strong> must be forwarded:</p>
+<table><thead><tr><th>Port</th><th>Purpose</th></tr></thead><tbody><tr><td>2456</td><td>Game/server traffic</td></tr><tr><td>2457</td><td>Query/Steam matchmaking</td></tr><tr><td>2458</td><td>Optional third service port</td></tr></tbody></table>
+<p><strong>Router Setup Examples:</strong> UniFi: Settings → Firewall → Port Forwarding → UDP 2456-2458. TP-Link: Advanced → NAT Forwarding → UDP 2456-2458. ASUS: WAN → Virtual Server → UDP 2456-2458.</p>
+<p><strong>Linux firewall:</strong> <code>ufw allow 2456:2458/udp</code></p>
+<div class="tip-box"><strong>⚠️ CGNAT Warning:</strong> If your WAN IP doesn't match your public IP, you're behind CGNAT. Solutions: request a public IPv4 from your ISP, switch to a VPS, or use crossplay (which doesn't need port forwarding).</div>
+
+<h2 id="crossplay">6. Crossplay Configuration</h2>
+<p>Add <code>-crossplay</code> to launch flags. The server will display a <strong>Join Code</strong> in the console. Share this code — players enter it in "Join Game" → "Add Server." No port forwarding needed for crossplay. However, <strong>crossplay and mods are mutually exclusive</strong> — Xbox/MS Store clients cannot load BepInEx mods.</p>
+
+<h2 id="connecting">7. Connecting to Your Server</h2>
+<table><thead><tr><th>Method</th><th>How</th></tr></thead><tbody><tr><td>Direct IP</td><td>Join Game → Add Server → enter IP:2456 + password</td></tr><tr><td>Steam Servers</td><td>Steam → View → Servers → Favorites → Add Server → IP:2456</td></tr><tr><td>In-game browser</td><td>Join Game → Community tab (may take 5-10 min to appear)</td></tr><tr><td>Steam Friends</td><td>Right-click friend on server → Join Game</td></tr></tbody></table>
+
+<h2 id="admin">8. Admin Commands &amp; Management</h2>
+<div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
+<p>Admin files are in your server's save directory: <code>adminlist.txt</code>, <code>bannedlist.txt</code>, <code>permittedlist.txt</code>. Add Steam64 IDs — one per line.</p>
+<table><thead><tr><th>Command (F5 in-game)</th><th>Effect</th></tr></thead><tbody><tr><td><code>save</code></td><td>Force world save</td></tr><tr><td><code>kick [name/ip/userID]</code></td><td>Remove a player</td></tr><tr><td><code>ban [name/ip/userID]</code></td><td>Permanently block a player</td></tr><tr><td><code>unban [ip/userID]</code></td><td>Remove a ban</td></tr><tr><td><code>banned</code></td><td>List all banned players</td></tr><tr><td><code>ping</code></td><td>Check latency</td></tr></tbody></table>
+
+<h2 id="world">9. World &amp; Backup Management</h2>
+<p><strong>Save paths:</strong> Windows: <code>%USERPROFILE%\AppData\LocalLow\IronGate\Valheim</code>. Linux: <code>~/.config/unity3d/IronGate/Valheim</code>.</p>
+<p><strong>Backup flags:</strong> <code>-saveinterval 900</code> (every 15 min) + <code>-backups 4</code> (rolling snapshots).</p>
+<p><strong>Manual backup (Linux):</strong> <code>tar -czf world-$(date +%F).tar.gz ~/.config/unity3d/IronGate/Valheim/worlds</code></p>
+<p><strong>Restore:</strong> Stop server → replace <code>.db</code> and <code>.fwl</code> files → restart.</p>
+
+<h2 id="mods">10. Modded Server Setup</h2>
+<p>Install <strong>BepInEx</strong> on both server and ALL clients. Match versions and configs exactly. Most gameplay mods require server+client installation. Use r2modman (Thunderstore) to manage profiles and share export codes. Crossplay must be DISABLED for mods to work. Restart the server weekly to clear memory — big builds and animal farms are the main lag sources.</p>
+
+<div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
+<div class="author-box"><strong>About the Author</strong><p>Valheim Guides is built by experienced server admins. All setup methods tested on Windows Server, Ubuntu, and Docker environments.</p></div>
+<div class="share-bar"><span>Share:</span> <a href="https://twitter.com/intent/tweet?url=https://valheims.com/server-setup.html&text=Valheim Dedicated Server Setup Guide" target="_blank" rel="noopener">Twitter</a> <a href="https://www.reddit.com/r/valheim/submit?url=https://valheims.com/server-setup.html" target="_blank" rel="noopener">Reddit</a></div>
+<div class="feedback"><p>Was this guide helpful?</p><button onclick="clarity('event','feedback','yes')">👍 Yes</button><button onclick="clarity('event','feedback','no')">👎 No</button></div>
+</article>
+</main>
+<footer><p>Valheim Guides — The independent Valheim resource. Not affiliated with Iron Gate Studio.</p><p style="margin-top:8px">Valheim and all related content are trademarks of Iron Gate Studio AB.</p><p style="margin-top:8px"><a href="about.html">About</a> &nbsp;|&nbsp;<a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp;<a href="terms.html">Terms of Use</a> &nbsp;|&nbsp;<a href="contact.html">Contact</a> &nbsp;|&nbsp;<a href="sitemap.xml">Sitemap</a></p></footer>
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+<script src="cookie-consent.js"></script>
+<script>(function(){var t=document.getElementById('themeToggle'),s=localStorage.getItem('valheim-theme');if(s)document.documentElement.setAttribute('data-theme',s);t.addEventListener('click',function(){var c=document.documentElement.getAttribute('data-theme'),n=(c==='dark')?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('valheim-theme',n);});var b=document.getElementById('backTop');window.addEventListener('scroll',function(){b.style.display=window.scrollY>400?'flex':'none';});b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});})();</script>
+</body></html>
