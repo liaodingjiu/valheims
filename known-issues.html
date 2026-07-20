@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valheim Known Issues &amp; Fixes 2026 — Bugs, Crashes, Lost Items &amp; Workarounds | Valheim Guides</title>
+<meta name="description" content="Latest Valheim known issues and community fixes. Crashes (Vulkan, Intel CPU), lost items, creature AI bugs, multiplayer connection problems, mod issues, and how to recover corrupted saves. Updated July 2026.">
+<meta name="keywords" content="Valheim bugs, Valheim known issues, Valheim crash fix, Valheim lost items, Valheim save corrupted, Valheim Vulkan crash, Valheim creature AI bug, Valheim incompatible version, Valheim mod bugs, Valheim server issues">
+<meta name="robots" content="index, follow"><link rel="canonical" href="https://valheims.com/known-issues.html"><link rel="stylesheet" href="shared.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Valheim Known Issues & Fixes 2026 — Bugs, Crashes & Workarounds",
+  "description": "Community-sourced list of Valheim known bugs, crashes, and issues with workarounds and fixes. Covers Vulkan crashes, lost items, creature AI, multiplayer issues, and mod bugs.",
+  "author": { "@id": "https://valheims.com/#org" },
+  "publisher": { "@id": "https://valheims.com/#org" },
+  "datePublished": "2026-07-20",
+  "dateModified": "2026-07-20",
+  "mainEntityOfPage": "https://valheims.com/known-issues.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://valheims.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Known Issues", "item": "https://valheims.com/known-issues.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+  {
+    "@type": "Question",
+    "name": "Why does Valheim keep crashing?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The most common crash causes in 2026 are: (1) Outdated mods or leftover mod files — remove all mods, verify game files. (2) Vulkan renderer instability — switch to DirectX 11 or disable FPS limiters in GPU control panel. (3) Intel 12th-14th gen i7/i9 CPU degradation — update BIOS, apply Intel base defaults, disable Turbo Boost. (4) Unstable CPU/RAM overclocks — reset BIOS to defaults. Hardware-dependent issues may require BIOS adjustments."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "How do I recover lost items after a Valheim crash?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "World saves and character saves are separate — items in your inventory are saved with your character, but items in boats, chests, or on the ground are tied to the world save. If a crash happens before an auto-save (every 30 min), everything since the last save is lost. To recover: (1) Go to C:\\Users\\<user>\\AppData\\LocalLow\\IronGate\\Valheim, find .old backup files, rename to remove .old. (2) From main menu: Manage Saves → Characters tab → restore a recent backup. (3) Use the 'save' console command after important activities. (4) Disable Steam Cloud saves to prevent sync corruption."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "Why do large enemies get stuck on terrain in Valheim?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Valheim uses procedurally generated worlds, so enemy pathfinding must be computed dynamically. Large creatures (Trolls, Bears, Seeker Soldiers) can get stuck on bushes, trees, and uneven terrain because the pathfinding doesn't always account for their larger collision box. Bears are the most commonly affected — their charge attacks often miss even when the player stands still, and they can trap themselves on small obstacles. This is a known engine limitation; procedural terrain makes pre-computed navigation meshes impossible."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "Why does Valheim show INCOMPATIBLE_VERSION error?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "INCOMPATIBLE_VERSION appears when your game client version doesn't match the server version. This typically happens after a game update: your Steam client auto-updates but the dedicated server hasn't been updated yet, or players are on different Steam branches (e.g., public-test vs default). Fix: ensure both client and server are on the same branch, update the server, and compare Build IDs to verify they match."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "Should I use Vulkan or DirectX for Valheim?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "As of 2026, DirectX 11 is recommended for most players. The official Patch 0.221.12 (February 2026) warns that 'playing using Vulkan might currently cause Valheim to be unstable and/or crash.' If you experience crashes with Vulkan, switch to DirectX 11 by launching without the -force-vulkan flag. If you want to keep Vulkan, try disabling FPS limiters in your Nvidia/AMD control panel — some users report this resolves the instability."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "Why did my Valheim world reset or appear fresh?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "This is usually caused by accidentally changing the world name in your server settings or launch parameters. When the world name doesn't match an existing save file, Valheim creates a brand new world. Check your server config or launch flags, set the world name back to its original value, and restart — your old world should load again. Double-check the exact spelling, including capitalization."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "Can I use mods with Valheim crossplay?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Mods and crossplay are completely incompatible. Crossplay uses PlayFab networking which BepInEx cannot hook into, and Xbox/Microsoft Store clients cannot load mod files at all. If your group wants mods, everyone must play on Steam with crossplay disabled. If you want cross-platform play, you must play unmodded. There is no workaround — this is a hard technical limitation."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "How do I report a Valheim bug to the developers?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Submit bugs through the official Valheim support page at valheim.com/support. You can also post in the Steam Community 'Bugs & Technical Issues' forum, or join the official Valheim Discord and use the bug-reports channel. When reporting, include your platform (Steam/Xbox/MS Store), whether you use mods, steps to reproduce the bug, and your system specs. The developers actively monitor all three channels."
+    }
+  }
+]
+}
+</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xny2nxsdez");
+</script>
+</head>
+<body data-category="technical"><div class="top-bar">Valheim Complete Guide 2026 — Known Issues &amp; Fixes. Updated <time datetime="2026-07-20">July 20, 2026</time>.</div>
+<nav aria-label="Main navigation"><div class="nav-inner"><a href="index.html" class="logo">Valheim<span>Guides</span></a><div class="nav-right"><ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li class="dropdown"><a href="guides-bosses.html">Bosses</a><ul class="dropdown-menu"><li><a href="boss-order.html">Boss Progression</a></li><li><a href="eikthyr-guide.html">Eikthyr</a></li><li><a href="elder-guide.html">The Elder</a></li><li><a href="bonemass-guide.html">Bonemass</a></li><li><a href="moder-guide.html">Moder</a></li><li><a href="yagluth-guide.html">Yagluth</a></li><li><a href="queen-guide.html">The Queen</a></li><li><a href="fader-guide.html">Fader</a></li></ul></li>
+<li class="dropdown"><a href="guides-equipment.html">Equipment</a><ul class="dropdown-menu"><li><a href="best-weapons.html">Best Weapons</a></li><li><a href="armor-guide.html">Armor Sets</a></li><li><a href="food-recipes.html">Food &amp; Cooking</a></li></ul></li>
+<li class="dropdown"><a href="guides-world.html">World</a><ul class="dropdown-menu"><li><a href="biome-guide.html">Biomes</a></li><li><a href="ashlands-guide.html">Ashlands</a></li><li><a href="deep-north-guide.html">Deep North</a></li><li><a href="sailing-guide.html">Sailing</a></li><li><a href="traders-guide.html">Traders</a></li><li><a href="farming-guide.html">Farming</a></li></ul></li>
+<li class="dropdown"><a href="guides-survival.html">Survival</a><ul class="dropdown-menu"><li><a href="building-guide.html">Base Building</a></li><li><a href="base-defense.html">Base Defense</a></li><li><a href="taming-guide.html">Taming</a></li><li><a href="beginner-guide.html">Beginner Guide</a></li></ul></li>
+<li class="dropdown"><a href="guides-technical.html">Technical</a><ul class="dropdown-menu"><li><a href="server-setup.html">Server Setup</a></li><li><a href="crossplay-guide.html">Crossplay</a></li><li><a href="known-issues.html">Known Issues</a></li><li><a href="mods-guide.html">Mods</a></li><li><a href="console-commands.html">Commands</a></li><li><a href="multiplayer-guide.html">Multiplayer</a></li></ul></li>
+</ul><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><span class="sun">☀️</span><span class="moon">🌙</span></button></div></div></nav>
+<main class="container with-sidebar">
+<aside class="sidebar">
+  <h4>Technical &amp; Multiplayer</h4>
+  <ul>
+    <li><a href="crossplay-guide.html">Crossplay Guide</a></li>
+    <li><a href="server-setup.html">Dedicated Server Setup</a></li>
+    <li><a href="known-issues.html">Known Issues &amp; Fixes</a></li>
+    <li><a href="mods-guide.html">Mods &amp; BepInEx</a></li>
+    <li><a href="console-commands.html">Console Commands</a></li>
+    <li><a href="multiplayer-guide.html">Multiplayer Guide</a></li>
+  </ul>
+  <h4>Related</h4>
+  <ul>
+    <li><a href="server-setup.html">Dedicated Server Setup &rarr;</a></li>
+    <li><a href="mods-guide.html">Mod Installation Guide &rarr;</a></li>
+    <li><a href="crossplay-guide.html">Crossplay Setup &rarr;</a></li>
+  </ul>
+</aside>
+<article class="content-main"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> &raquo; <span>Known Issues &amp; Fixes</span></nav>
+<div class="ad-placeholder">[ AdSense Ad Unit — Responsive Leaderboard ]</div>
+<section class="hero"><h1>Valheim Known Issues &amp; Fixes 2026</h1><p>Community-sourced list of Valheim bugs, crashes, and known issues — with workarounds where available. Sourced from Reddit r/valheim, Steam Community Bug Reports, and official patch notes. Last updated: July 20, 2026. Covers Vulkan crashes, Intel CPU instability, lost items after crashes, creature AI bugs, multiplayer connection problems, mod-specific issues, and more.</p></section>
+<nav class="toc"><h2>On This Page</h2><ol><li><a href="#crashes">Crashes &amp; Performance</a></li><li><a href="#saves">Save &amp; Item Recovery</a></li><li><a href="#creatures">Creature AI &amp; Boss Bugs</a></li><li><a href="#multiplayer">Multiplayer &amp; Server Issues</a></li><li><a href="#mods">Mod-Specific Issues</a></li><li><a href="#other">Other Known Issues</a></li><li><a href="#report">How to Report Bugs</a></li><li><a href="#faq">FAQ</a></li></ol></nav>
+
+<h2 id="crashes">1. Crashes &amp; Performance Issues</h2>
+<div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
+<table><thead><tr><th>Issue</th><th>Status</th><th>Workaround / Fix</th></tr></thead><tbody>
+<tr><td><strong>Vulkan Renderer Crashes</strong><br><small>Game unstable or crashes on launch with Vulkan. Official Patch 0.221.12 (Feb 2026) confirms: "playing using Vulkan might currently cause Valheim to be unstable and/or crash."</small></td><td>⚠️ Known, fix in progress</td><td>Switch to DirectX 11 (remove <code>-force-vulkan</code> launch flag). If Vulkan is required, disable FPS limiters in Nvidia/AMD control panel.</td></tr>
+<tr><td><strong>Intel 12th-14th Gen CPU Crashes</strong><br><small>Frequent crashes on i7/i9 processors (12th, 13th, 14th gen) due to CPU degradation and voltage instability.</small></td><td>⚠️ Hardware-dependent</td><td>Update motherboard BIOS. Apply Intel base defaults (not manufacturer profile). Lock all cores to single frequency. Disable Intel Turbo Boost. Check BIOS voltage settings for "CPU Internal AC/DC Load Line."</td></tr>
+<tr><td><strong>FPS Drops in Large Bases</strong><br><small>Severe FPS degradation with thousands of building pieces, extensive terrain modifications, or too many tamed animals.</small></td><td>⚠️ Engine limitation</td><td>Limit base size. Reduce tamed animal count. Avoid excessive terrain flattening. Use <code>-force-vulkan</code> as alternative (if stable). Enable Vsync to cap FPS.</td></tr>
+<tr><td><strong>Ashlands Crash &amp; Rollback</strong><br><small>Since Ashlands update: crashes cause character inventory to roll back while world progress is lost. Manual save button sometimes doesn't work.</small></td><td>⚠️ Ongoing</td><td>Use F5 console command <code>save</code> or <code>/save</code> in chat frequently. Don't rely on the ESC save button. Disable Steam Cloud saves.</td></tr>
+<tr><td><strong>Steam Client Freeze on Launch</strong><br><small>Launching an un-updated version of Valheim freezes the entire Steam client for 3-5 minutes during "Checking for DLCs."</small></td><td>⚠️ Triggered by outdated build</td><td>Keep Valheim updated. If stuck, force-close Steam and update before relaunching.</td></tr>
+</tbody></table>
+
+<h2 id="saves">2. Save &amp; Item Recovery</h2>
+<div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
+
+<h3>How Valheim Saves Work</h3>
+<p><strong>World saves and character saves are separate.</strong> Your inventory is saved with your character file. Items in boats, chests, or on the ground are part of the world save. The game auto-saves every 30 minutes and when you log out. If a crash happens before the next world save, everything since the last save is lost. A crash <em>during</em> a save can corrupt the file entirely.</p>
+
+<table><thead><tr><th>Issue</th><th>Status</th><th>Recovery / Fix</th></tr></thead><tbody>
+<tr><td><strong>Lost Items After Crash</strong><br><small>Crash before next auto-save wipes all progress since last save — gathered resources, building, boat cargo.</small></td><td>⚠️ Save timing issue</td><td>Use <code>save</code> console command after major activities. Go to <code>C:\Users\&lt;user&gt;\AppData\LocalLow\IronGate\Valheim</code> → find <code>.old</code> backup files → rename to remove <code>.old</code>. From main menu: Manage Saves → restore recent backup.</td></tr>
+<tr><td><strong>Steam Cloud Save Corruption</strong><br><small>Cloud sync causes save corruption and unexpected rollbacks.</small></td><td>⚠️ Ongoing</td><td>Convert world and character saves to <strong>local</strong> from the main menu. Disable Steam Cloud for Valheim in Steam → Properties → General.</td></tr>
+<tr><td><strong>Duplicate Items / Gear Cloning</strong><br><small>Since Ashlands: if you die and the game crashes before recovering your tombstone, the rollback places you before death but your tombstone still exists — doubling your gear.</small></td><td>⚠️ Exploit-level bug</td><td>No fix from developers yet. To avoid: manually save before risky combat. To undo: discard duplicated items.</td></tr>
+<tr><td><strong>World Appears "Reset" / Fresh</strong><br><small>World loads as brand new — all buildings and progress gone.</small></td><td>⚠️ Usually user error</td><td>Check that the <strong>world name</strong> in your server settings or launch flags exactly matches the original name (including capitalization). A mismatch creates a new world.</td></tr>
+<tr><td><strong>Items Stuck on Stands / Cooking Stations</strong><br><small>Cannot remove items from item stands or cooking stations.</small></td><td>⚠️ Recurring</td><td>Destroy the stand/station (you'll lose the item). Restart the game and try again. Some players report success after waiting for a save cycle.</td></tr>
+</tbody></table>
+
+<h2 id="creatures">3. Creature AI &amp; Boss Bugs</h2>
+<div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
+<div class="tip-box"><strong>🔍 Why this happens:</strong> Valheim uses procedurally generated worlds, so pathfinding must be computed dynamically. Pre-computed navigation meshes aren't possible. Large creatures with bigger collision boxes are most affected — the pathfinding doesn't always account for their size against small obstacles like bushes and rocks. The developers have implemented some fixes (mainly for Bears) but it remains an engine-level challenge.</div>
+
+<table><thead><tr><th>Bug</th><th>Affected Creatures</th><th>What Happens</th><th>Workaround</th></tr></thead><tbody>
+<tr><td><strong>Creature Stuck on Terrain</strong></td><td>Troll, Bear, Seeker Soldier</td><td>Gets stuck on bushes, trees, or small terrain bumps. Stands still while being attacked.</td><td>Move to open ground to re-trigger pathfinding. Use ranged attacks from a safe distance if they're immobilized.</td></tr>
+<tr><td><strong>Bear Charge Attack Misses</strong></td><td>Bear</td><td>Charge hits nothing even when player stands still. Bear often tumbles down cliffs after missing.</td><td>The charge targets your last known position — sidestep just before impact. This is semi-exploitable.</td></tr>
+<tr><td><strong>Charge Cooldown Ignores Obstacles</strong></td><td>Bear, Eikthyr</td><td>Creature dashes in a straight line. If an obstacle stops it early, the cooldown still triggers — meaning it stands there vulnerable.</td><td>Lure them near obstacles, then attack from behind during their cooldown.</td></tr>
+<tr><td><strong>Troll Won't Attack at Head Height</strong></td><td>Troll</td><td>Player stands on slightly elevated ground at head level — Troll doesn't attack despite being in range.</td><td>This is exploitable for easy Troll kills. To fight fairly, engage on flat ground.</td></tr>
+<tr><td><strong>Moder Boss AI Issues</strong></td><td>Moder</td><td>Widely considered the worst boss fight due to erratic AI. Dragon may not land, fly in circles, or get stuck mid-air.</td><td>Use ranged attacks (arrows). Bring lots of patience. Some players recommend fighting with a group to split aggro.</td></tr>
+</tbody></table>
+
+<h2 id="multiplayer">4. Multiplayer &amp; Server Issues</h2>
+<div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
+<table><thead><tr><th>Issue</th><th>Cause</th><th>Fix</th></tr></thead><tbody>
+<tr><td><strong>INCOMPATIBLE_VERSION Error</strong></td><td>Client auto-updated but server hasn't. Or players are on different Steam branches (public-test vs default).</td><td>Update your dedicated server. Ensure all players and server are on the same Steam branch. Compare Build IDs to verify they match. See <a href="https://supercraft.host/wiki/valheim/incompatible_version_after_update/" rel="noopener">Build ID guide</a>.</td></tr>
+<tr><td><strong>Connection Failed / Can't Join Server</strong></td><td>Killer Network Software (common on MSI PCs) interferes with Valheim networking. Or crossplay + IP direct connection conflict.</td><td>Uninstall Killer Network software. Use Join Code for crossplay — don't mix crossplay with direct IP connections. See our <a href="crossplay-guide.html">Crossplay Guide</a>.</td></tr>
+<tr><td><strong>Players Thrown Off Boats During Saves</strong></td><td>The game briefly pauses during auto-save, which can desync boat physics and throw players off — especially at sea.</td><td>Slow down before auto-save triggers (every 30 min). Use <code>/save</code> command while stationary to control save timing.</td></tr>
+<tr><td><strong>Server Rubberbanding / Desync</strong></td><td>Host's internet instability, CPU bottleneck on server, or too many players/instances in one area.</td><td>Switch to a dedicated server with more resources. Reduce tamed animals and loose items in the area. Have the player with the best internet host peer-to-peer games.</td></tr>
+</tbody></table>
+
+<h2 id="mods">5. Mod-Specific Issues</h2>
+<div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
+<div class="tip-box"><strong>⚠️ General Mod Warning:</strong> 90% of crash reports on the Steam Bug forum are mod-related. After every Valheim update, mods break. Always: (1) update BepInEx and all mods after a patch, (2) verify game files through Steam, (3) test in vanilla before reporting a bug. Crossplay and mods are mutually exclusive — see our <a href="crossplay-guide.html">Crossplay Guide</a>.</div>
+
+<table><thead><tr><th>Mod / Issue</th><th>Bug</th><th>Status / Fix</th></tr></thead><tbody>
+<tr><td><strong>ValheimRAFT — Player Launched Into Sky</strong></td><td>Using Modor power + speed 2 on a ValheimRAFT ship throws the driver off the wheel. Player is launched into the stratosphere (5-8 minute fall) or ejected into the ocean. Boat continues running onto land. Speed 3 is "nearly instantly catastrophic."</td><td>No known fix. Community consensus: ValheimRAFT is one of the buggiest mods. Recommendation: uninstall and don't look back.</td></tr>
+<tr><td><strong>BepInEx NullReferenceException Loop</strong></td><td><code>NullReferenceException</code> in <code>ZNetScene.RemoveObjects</code> fills the console with errors and slows the game to a crawl. Common with modpacks like Epic Valheim.</td><td>Verify game files. Update all mods to latest versions. Remove mods one by one to identify the culprit. After each Valheim patch, rebuild your mod stack from scratch.</td></tr>
+<tr><td><strong>Mobs Not Spawning Naturally</strong></td><td>Biomes past Black Forest only spawn from spawners/body piles — no natural spawns.</td><td>Likely leftover mod files corrupting spawn tables. Fully uninstall all mods, delete all files in the Valheim install directory, verify game files through Steam.</td></tr>
+<tr><td><strong>INCOMPATIBLE_VERSION After Modding</strong></td><td>Modded client or server shows INCOMPATIBLE_VERSION after an update.</td><td>BepInEx and all mods must match the game's current Build ID. Check <a href="https://supercraft.host/wiki/valheim/incompatible_version_after_update/" rel="noopener">this Build ID matching guide</a>. Wait for mod authors to update before playing on a modded server post-patch.</td></tr>
+</tbody></table>
+
+<h2 id="other">6. Other Known Issues</h2>
+<div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
+<table><thead><tr><th>Issue</th><th>Description</th><th>Workaround</th></tr></thead><tbody>
+<tr><td><strong>Display Input Bugs (Mac)</strong></td><td>After the Mac release update: right-clicking with a hammer tabs out of fullscreen onto a second monitor. Using a hoe to raise ground triggers auto-sprinting.</td><td>Reset keybinds to default. If persistent, fully reinstall the game.</td></tr>
+<tr><td><strong>Furnaces / Kilns "Turning Off"</strong></td><td>Furnaces and kilns stop working randomly. <strong>This is usually not a bug</strong> — blocked smoke exhaust (roof too low, no ventilation) causes them to shut down.</td><td>Ensure at least 2 meters of clear space above the furnace/kiln with open ventilation. If smoke can't escape, they stop. See our <a href="building-guide.html">Base Building Guide</a>.</td></tr>
+<tr><td><strong>Auto-Pickup Not Working</strong></td><td>Items on the ground are not automatically picked up.</td><td>The default toggle key is <strong>V</strong>. You may have accidentally pressed it. Check keybind settings if it's still not working.</td></tr>
+<tr><td><strong>Resolution Settings Erratic in Windowed Mode</strong></td><td>Resolution behaves unpredictably when switching between fullscreen and windowed.</td><td>Fixed in Patch 0.221.12 (Feb 2026). If still occurring, update your game and GPU drivers.</td></tr>
+<tr><td><strong>Audio Stutters in Ashlands</strong></td><td>Audio crackling and stuttering in Ashlands biome.</td><td>Fixed in Patch 0.221.12 (Feb 2026). If still occurring, verify game files and update audio drivers.</td></tr>
+</tbody></table>
+
+<h2 id="report">7. How to Report Bugs</h2>
+<p>If you encounter an issue not listed here, report it through the official channels. The developers actively monitor all three:</p>
+<ul>
+<li><strong>Official Bug Report:</strong> <a href="https://valheim.com/support" rel="noopener noreferrer">valheim.com/support</a></li>
+<li><strong>Steam Community:</strong> Steam → Valheim → Discussions → <a href="https://steamcommunity.com/app/892970/discussions/1/" rel="noopener noreferrer">Bugs &amp; Technical Issues</a></li>
+<li><strong>Valheim Discord:</strong> <a href="https://discord.gg/valheim" rel="noopener noreferrer">discord.gg/valheim</a> → #bug-reports channel</li>
+</ul>
+<div class="tip-box"><strong>📋 What to include in a bug report:</strong> Platform (Steam/Xbox/MS Store), whether you use mods (yes/no), steps to reproduce the bug, your system specs (CPU, GPU, RAM), and any error messages you see. The more detail you provide, the faster the devs can diagnose the issue.</div>
+
+<h2 id="faq">8. Frequently Asked Questions</h2>
+<div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
+
+<h3>Q: Why does Valheim keep crashing?</h3>
+<p>The most common crash causes in 2026 are: (1) <strong>Outdated mods</strong> — remove all mods, verify game files. (2) <strong>Vulkan renderer instability</strong> — switch to DirectX 11 or disable FPS limiters in your GPU control panel. (3) <strong>Intel 12th-14th gen i7/i9 CPU degradation</strong> — update BIOS, apply Intel base defaults, disable Turbo Boost. (4) <strong>Unstable overclocks</strong> — reset BIOS to defaults. Start by ruling out mods — this fixes the vast majority of crashes.</p>
+
+<h3>Q: How do I recover lost items after a crash?</h3>
+<p>World saves and character saves are separate — your inventory is saved with your character, but items in boats, chests, or on the ground are part of the world save. To recover: (1) Go to <code>C:\Users\&lt;user&gt;\AppData\LocalLow\IronGate\Valheim</code>, find <code>.old</code> backup files, rename to remove <code>.old</code>. (2) From main menu: Manage Saves → Characters tab → restore a recent backup. (3) Use the <code>save</code> console command after important activities. (4) Disable Steam Cloud saves to prevent sync corruption.</p>
+
+<h3>Q: Why do large enemies get stuck on terrain?</h3>
+<p>Valheim uses procedurally generated worlds, so enemy pathfinding is computed dynamically — no pre-computed navigation meshes. Large creatures (Trolls, Bears, Seeker Soldiers) have bigger collision boxes, and the pathfinding doesn't always account for small obstacles like bushes and rocks. Bears are the worst offenders. This is an engine-level limitation, not a simple bug to fix. Move to open ground to re-trigger their pathfinding.</p>
+
+<h3>Q: Why does Valheim show INCOMPATIBLE_VERSION?</h3>
+<p>This error appears when your game client version doesn't match the server version. It typically happens after a game update — your Steam client auto-updates but the dedicated server lags behind, or players are on different Steam branches (e.g., <code>public-test</code> vs <code>default</code>). Fix: update your server, ensure all players are on the same branch, and compare Build IDs to verify they match.</p>
+
+<h3>Q: Should I use Vulkan or DirectX for Valheim?</h3>
+<p>As of 2026, <strong>DirectX 11 is recommended</strong> for most players. The official Patch 0.221.12 (February 2026) explicitly warns that Vulkan may cause instability and crashes. If you currently use <code>-force-vulkan</code> and experience crashes, try launching without it. If Vulkan performs better for you and is stable, you can keep using it — just be aware a fix is in progress.</p>
+
+<h3>Q: Why did my world reset to a fresh start?</h3>
+<p>This is nearly always caused by the world name being accidentally changed in your server settings or launch parameters. When the name doesn't match an existing save file, Valheim creates a brand new world. Check your config or launch flags, set the world name back to its exact original spelling (capitalization matters), and restart. Don't delete anything — your old world files are still on disk.</p>
+
+<h3>Q: Can I use mods and crossplay together?</h3>
+<p><strong>No.</strong> Crossplay uses PlayFab networking which BepInEx cannot hook into, and Xbox/Microsoft Store clients cannot load mod files at all. If your group wants mods, everyone must be on Steam with crossplay disabled. If you want cross-platform play, you must go unmodded. There is no workaround — this is a hard technical limitation. See our <a href="crossplay-guide.html">Crossplay Guide</a> for the full details.</p>
+
+<h3>Q: How do I report a bug to the Valheim developers?</h3>
+<p>Submit bugs through <a href="https://valheim.com/support" rel="noopener noreferrer">valheim.com/support</a>, the <a href="https://steamcommunity.com/app/892970/discussions/1/" rel="noopener noreferrer">Steam Bugs &amp; Technical Issues forum</a>, or the official <a href="https://discord.gg/valheim" rel="noopener noreferrer">Valheim Discord</a> #bug-reports channel. Include your platform, whether you use mods, steps to reproduce, and your system specs. The devs monitor all three channels.</p>
+
+<div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
+<div class="share-bar"><span>Share:</span> <a href="https://twitter.com/intent/tweet?url=https://valheims.com/known-issues.html&text=Valheim Known Issues & Fixes — Community-sourced bug list" target="_blank" rel="noopener">Twitter</a></div>
+<div class="feedback"><p>Was this guide helpful? Did we miss a bug?</p><button onclick="clarity('event','feedback','yes')">👍 Yes</button><button onclick="clarity('event','feedback','no')">👎 No</button></div>
+</article>
+</main>
+<footer><p>Valheim Guides — Not affiliated with Iron Gate Studio. Bug reports sourced from community discussions — verify against official patch notes.</p><p style="margin-top:8px"><a href="about.html">About</a> &nbsp;|&nbsp;<a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp;<a href="terms.html">Terms of Use</a> &nbsp;|&nbsp;<a href="contact.html">Contact</a> &nbsp;|&nbsp;<a href="sitemap.xml">Sitemap</a></p></footer>
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+<script src="cookie-consent.js"></script>
+<script>(function(){var t=document.getElementById('themeToggle'),s=localStorage.getItem('valheim-theme');if(s)document.documentElement.setAttribute('data-theme',s);t.addEventListener('click',function(){var c=document.documentElement.getAttribute('data-theme'),n=(c==='dark')?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('valheim-theme',n);});var b=document.getElementById('backTop');window.addEventListener('scroll',function(){b.style.display=window.scrollY>400?'flex':'none';});b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});})();</script>
+</body></html>

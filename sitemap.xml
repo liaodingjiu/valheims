@@ -25,6 +25,7 @@
   <url><loc>https://valheims.com/server-setup.html</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://valheims.com/mods-guide.html</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://valheims.com/console-commands.html</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://valheims.com/crossplay-guide.html</loc><lastmod>2026-07-20</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://valheims.com/traders-guide.html</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://valheims.com/farming-guide.html</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://valheims.com/base-defense.html</loc><lastmod>2026-07-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -34,5 +35,6 @@
   <url><loc>https://valheims.com/guides-equipment.html</loc><lastmod>2026-07-17</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://valheims.com/guides-world.html</loc><lastmod>2026-07-17</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://valheims.com/guides-survival.html</loc><lastmod>2026-07-17</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://valheims.com/known-issues.html</loc><lastmod>2026-07-20</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://valheims.com/guides-technical.html</loc><lastmod>2026-07-17</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 </urlset>
