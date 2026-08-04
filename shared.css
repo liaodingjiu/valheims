@@ -1318,6 +1318,11 @@ code {
 .biome-node-body .biome-resources { font-size: 13px; color: var(--text2); margin-bottom: 4px; }
 .biome-node-body .biome-boss { font-size: 13px; color: var(--text2); margin-bottom: 8px; }
 .biome-node-link { font-size: 13px; font-weight: 600; color: var(--green); text-decoration: none; }
+
+.biome-enemies { font-size: 13px; color: var(--text2); margin-bottom: 2px; }
+.biome-enemies strong { color: var(--text); }
+.biome-prep { font-size: 13px; color: var(--text2); }
+.biome-prep strong { color: var(--text); }
 .biome-node-link:hover { color: var(--gold); text-decoration: underline; }
 .biome-arrow { text-align: center; font-size: 22px; color: var(--gold); padding: 6px 0; font-weight: 800; }
 
