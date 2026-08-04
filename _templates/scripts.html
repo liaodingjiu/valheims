@@ -1,0 +1,25 @@
+<button class="back-top" id="backTop" aria-label="Back to top" title="Back to top">↑</button>
+<script src="cookie-consent.js"></script>
+<script>
+(function() {
+  var toggle = document.getElementById('themeToggle');
+  var stored = localStorage.getItem('valheim-theme');
+  if (stored) document.documentElement.setAttribute('data-theme', stored);
+  toggle.addEventListener('click', function() {
+    var current = document.documentElement.getAttribute('data-theme');
+    var next = (current === 'dark') ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('valheim-theme', next);
+  });
+  var btn = document.getElementById('backTop');
+  window.addEventListener('scroll', function() { btn.classList.toggle('visible', window.scrollY > 500); });
+  btn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+})();
+function handleFeedback(type) {
+  document.querySelectorAll('.feedback-btn').forEach(function(b) { b.classList.remove('voted'); });
+  if (type === 'yes') document.querySelector('.feedback-btns .feedback-btn:first-child').classList.add('voted');
+  if(window.clarity){window.clarity("event","feedback",type);}
+  if (type === 'no') document.querySelector('.feedback-btns .feedback-btn:last-child').classList.add('voted');
+  if(window.clarity){window.clarity("event","feedback",type);}
+}
+</script>

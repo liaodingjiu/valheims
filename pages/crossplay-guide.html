@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚔️</text></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valheim Crossplay Guide 2026 — Is Valheim Cross-Platform? Full Setup | Valheim Guides</title>
+<meta name="description" content="Is Valheim cross-platform? Yes — Steam, Xbox, PC Game Pass, with PS5 and Switch 2 coming in 1.0. Full crossplay setup guide, platform compatibility matrix, cross-progression rules, Join Code troubleshooting, and mod workarounds.">
+<meta name="keywords" content="Valheim crossplay, Valheim cross platform, Valheim cross platform PS5, Valheim cross platform Xbox, Valheim cross platform PS4, Valheim crossplay setup, Valheim Join Code, Valheim cross progression, Valheim crossplay mods, Valheim cross platform Switch">
+<meta name="robots" content="index, follow"><link rel="canonical" href="https://valheims.com/crossplay-guide.html"><link rel="stylesheet" href="shared.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Valheim Crossplay Guide 2026 — Is Valheim Cross-Platform? Full Setup & Compatibility",
+  "description": "Complete Valheim cross-platform guide. Compatibility matrix for Steam, Xbox, PS5, Switch 2. Setup steps, Join Code troubleshooting, cross-progression rules, and mod workarounds.",
+  "author": { "@id": "https://valheims.com/#org" },
+  "publisher": { "@id": "https://valheims.com/#org" },
+  "datePublished": "2026-07-20",
+  "dateModified": "2026-07-20",
+  "mainEntityOfPage": "https://valheims.com/crossplay-guide.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://valheims.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Crossplay Guide", "item": "https://valheims.com/crossplay-guide.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+  {
+    "@type": "Question",
+    "name": "Is Valheim cross-platform on PS5?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Valheim will be cross-platform on PS5 when the PlayStation 5 version launches alongside Valheim 1.0 in 2026. Iron Gate Studio has confirmed the PS5 release. Once available, PS5 players will be able to crossplay with Steam, Xbox, and PC Game Pass players using the Join Code system."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "Is Valheim cross-platform PS4 and Xbox?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Valheim is not releasing on PS4. The console release is for PlayStation 5 only (coming with Valheim 1.0 in 2026). Xbox One and Xbox Series X|S are already supported and can crossplay with Steam and PC Game Pass."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "Can Steam and Xbox play Valheim together?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Steam and Xbox players can play Valheim together using crossplay. The host enables Crossplay when starting the world or adds -crossplay to dedicated server launch flags, then shares the 6-digit Join Code. Other players enter this code in Join Game > Add Server. No port forwarding needed — crossplay uses PlayFab networking."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "Is Valheim cross-platform with mods?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Mods and crossplay are mutually exclusive. Crossplay uses PlayFab networking which BepInEx cannot hook into, and Xbox/MS Store clients cannot load mods at all. If your group wants to use mods, everyone must play on Steam with crossplay disabled. If you want cross-platform play, you must play unmodded."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "Why is my Valheim Join Code not showing up?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Common causes: Crossplay is not enabled in the world settings or -crossplay flag. The server hasn't fully started yet (wait 30-60 seconds). You're behind a firewall blocking PlayFab traffic. The dedicated server console may show the Join Code in a different section than expected — check both the main console output and the in-game pause menu."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "Does Valheim support cross-progression?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Partial cross-progression is supported. Your characters and world progress carry over between Xbox consoles and the Microsoft Store/PC Game Pass version through Xbox cloud saves. However, cross-progression does NOT extend to Steam — Steam characters and worlds are tied to the Steam ecosystem and cannot be transferred to or from Xbox or Microsoft Store versions."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "Crossplay vs dedicated server — which is better for Valheim?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Crossplay (Join Code) is best for quick sessions with friends on different platforms — no setup required, no port forwarding. Dedicated servers are better for 24/7 worlds, large groups, or when using mods — but require setup and port forwarding (unless using crossplay mode on the server). You can combine both: run a dedicated server with -crossplay flag to support all platforms with 24/7 uptime."
+    }
+  },
+  {
+    "@type": "Question",
+    "name": "Is Valheim on Nintendo Switch?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Valheim is not available on the original Nintendo Switch, but a Nintendo Switch 2 version is expected to launch alongside Valheim 1.0 in 2026. The Switch 2 version will support full crossplay with Steam, Xbox, and PS5 through the Join Code system."
+    }
+  }
+]
+}
+</script>
+<link rel="preconnect" href="https://www.clarity.ms">
+<!-- #include clarity.html -->
+</head>
+<body data-category="technical"><div class="top-bar">Valheim Complete Guide 2026 — Crossplay &amp; Multi-Platform. Updated <time datetime="2026-07-20">July 20, 2026</time>.</div>
+<!-- #include nav.html -->
+<main class="container with-sidebar">
+<!-- #include sidebar-technical.html -->
+<article class="content-main"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> &raquo; <span>Crossplay Guide</span></nav>
+<div class="ad-placeholder">[ AdSense Ad Unit — Responsive Leaderboard ]</div>
+<section class="hero"><h1>Valheim Crossplay Guide 2026 — Is Valheim Cross-Platform?</h1><p>Yes, Valheim supports full cross-platform multiplayer across Steam, Xbox, and PC Game Pass — with PS5 and Nintendo Switch 2 coming with the 1.0 launch. This guide covers everything: platform compatibility, step-by-step crossplay setup, Join Code troubleshooting, cross-progression rules, and what to do if your group wants mods.</p></section>
+<nav class="toc"><h2>On This Page</h2><ol><li><a href="#answer">Quick Answer: Is Valheim Cross-Platform?</a></li><li><a href="#matrix">Platform Compatibility Matrix</a></li><li><a href="#setup">How to Set Up Crossplay</a></li><li><a href="#join-code">Join Code Troubleshooting</a></li><li><a href="#cross-progression">Cross-Progression Rules</a></li><li><a href="#mods">Crossplay &amp; Mods — Your Two Options</a></li><li><a href="#faq">FAQ</a></li></ol></nav>
+
+<h2 id="answer">1. Quick Answer: Is Valheim Cross-Platform?</h2>
+<div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
+<p><strong>Yes, Valheim supports full cross-platform play across Steam, Xbox, and PC Game Pass (Microsoft Store).</strong> PlayStation 5 and Nintendo Switch 2 crossplay will be available with the Valheim 1.0 launch in 2026. Here's how it works:</p>
+<ul>
+<li><strong>Host enables Crossplay</strong> — check the "Crossplay" box when starting a world, or add <code>-crossplay</code> to your dedicated server launch flags.</li>
+<li><strong>Host shares the 6-digit Join Code</strong> — found in the pause menu (peer-to-peer) or server console (dedicated server).</li>
+<li><strong>Friends join using the code</strong> — "Join Game" → "Add Server" → enter the Join Code. That's it.</li>
+<li><strong>No port forwarding needed</strong> — crossplay uses PlayFab networking, which handles NAT traversal automatically.</li>
+<li><strong>Mods are incompatible with crossplay</strong> — if your group uses mods, everyone must be on Steam with crossplay off (see <a href="#mods">section 6</a> for your options).</li>
+</ul>
+
+<h2 id="matrix">2. Platform Compatibility Matrix</h2>
+<p>Use this table to check if your group's platform combination works. <strong>Green = works today. Orange = coming with Valheim 1.0 (2026).</strong></p>
+<table><thead><tr><th></th><th>Steam</th><th>Xbox</th><th>MS Store / Game Pass</th><th>PS5</th><th>Switch 2</th></tr></thead><tbody>
+<tr><td><strong>Steam</strong></td><td>✅ Native</td><td>✅ Crossplay</td><td>✅ Crossplay</td><td>⏳ 1.0 (2026)</td><td>⏳ 1.0 (2026)</td></tr>
+<tr><td><strong>Xbox</strong></td><td>✅ Crossplay</td><td>✅ Native</td><td>✅ Native</td><td>⏳ 1.0 (2026)</td><td>⏳ 1.0 (2026)</td></tr>
+<tr><td><strong>MS Store</strong></td><td>✅ Crossplay</td><td>✅ Native</td><td>✅ Native</td><td>⏳ 1.0 (2026)</td><td>⏳ 1.0 (2026)</td></tr>
+<tr><td><strong>PS5</strong></td><td>⏳ 1.0 (2026)</td><td>⏳ 1.0 (2026)</td><td>⏳ 1.0 (2026)</td><td>✅ Native</td><td>⏳ 1.0 (2026)</td></tr>
+<tr><td><strong>Switch 2</strong></td><td>⏳ 1.0 (2026)</td><td>⏳ 1.0 (2026)</td><td>⏳ 1.0 (2026)</td><td>⏳ 1.0 (2026)</td><td>✅ Native</td></tr>
+</tbody></table>
+<div class="tip-box"><strong>🔑 How to read this table:</strong> Find your platform on the left, your friend's platform on the top. "Crossplay" means you need the Join Code method (section 3). "Native" means you're on the same platform family — use regular invites. PS4 is not listed because Valheim will not release on PS4.</div>
+
+<h3>Platform-Specific Notes</h3>
+<table><thead><tr><th>Platform</th><th>Current Status</th><th>Crossplay Method</th><th>Mod Support</th></tr></thead><tbody>
+<tr><td><strong>Steam (Windows &amp; Linux)</strong></td><td>✅ Available</td><td>Join Code or Steam Invite</td><td>✅ Full BepInEx support</td></tr>
+<tr><td><strong>Xbox One / Series X|S</strong></td><td>✅ Available</td><td>Join Code or Xbox Invite</td><td>❌ No mod support</td></tr>
+<tr><td><strong>PC Game Pass / Microsoft Store</strong></td><td>✅ Available</td><td>Join Code or Xbox App Invite</td><td>❌ No mod support</td></tr>
+<tr><td><strong>PlayStation 5</strong></td><td>⏳ 1.0 (2026)</td><td>Join Code (expected)</td><td>❌ No mod support (expected)</td></tr>
+<tr><td><strong>Nintendo Switch 2</strong></td><td>⏳ 1.0 (2026)</td><td>Join Code (expected)</td><td>❌ No mod support (expected)</td></tr>
+<tr><td><strong>PlayStation 4</strong></td><td>❌ Not planned</td><td>N/A</td><td>N/A</td></tr>
+<tr><td><strong>Nintendo Switch (Original)</strong></td><td>❌ Not planned</td><td>N/A</td><td>N/A</td></tr>
+</tbody></table>
+
+<h2 id="setup">3. How to Set Up Crossplay — Step by Step</h2>
+<div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
+
+<h3>Option A: Peer-to-Peer (Host Your World)</h3>
+<ol>
+<li><strong>Start Valheim</strong> and select your character.</li>
+<li>Click <strong>"Start Game"</strong> → select your world, or <strong>"New"</strong> to create one.</li>
+<li><strong>Check the "Crossplay" box</strong> before starting the world.</li>
+<li>Once in-game, press <strong>Esc</strong> → look for the <strong>6-digit Join Code</strong> at the top of the pause menu.</li>
+<li><strong>Share this code</strong> with your friends (any platform).</li>
+<li>Friends: <strong>"Join Game"</strong> → <strong>"Add Server"</strong> → enter the Join Code → <strong>"Connect."</strong></li>
+</ol>
+
+<h3>Option B: Dedicated Server with Crossplay</h3>
+<ol>
+<li>Add <code>-crossplay</code> to your server launch flags. Example:<br><code>valheim_server -name "My Server" -world "MyWorld" -password "secret" -crossplay</code></li>
+<li>Start the server — wait 30-60 seconds for full initialization.</li>
+<li>Find the <strong>Join Code</strong> in the server console output:<br><code>Join code: XXXXXX</code></li>
+<li>Share the Join Code with all players.</li>
+<li>Players connect: "Join Game" → "Add Server" → enter code.</li>
+</ol>
+<div class="tip-box"><strong>💡 Pro Tip:</strong> Running a dedicated server with <code>-crossplay</code> gives you the best of both worlds — 24/7 uptime for your world AND cross-platform access without port forwarding. The Join Code bypasses the need to share your IP address. See our <a href="server-setup.html">Dedicated Server Guide</a> for full setup instructions.</div>
+
+<h3>Crossplay Setup Checklist</h3>
+<ul class="checklist">
+<li><input type="checkbox" disabled> Host: Crossplay box is checked (or <code>-crossplay</code> flag is set on server)</li>
+<li><input type="checkbox" disabled> Host: 6-digit Join Code is visible and shared with all players</li>
+<li><input type="checkbox" disabled> All players: Enter Join Code via "Join Game" → "Add Server"</li>
+<li><input type="checkbox" disabled> Verify: All players appear in-game</li>
+<li><input type="checkbox" disabled> Mod check: If using mods → disable crossplay, all players must be on Steam (see <a href="#mods">section 6</a>)</li>
+</ul>
+
+<h2 id="join-code">4. Join Code Troubleshooting</h2>
+<p>Join Code not showing up or not working? Here are the most common issues and fixes:</p>
+<table><thead><tr><th>Problem</th><th>Likely Cause</th><th>Fix</th></tr></thead><tbody>
+<tr><td><strong>Join Code not appearing</strong></td><td>Crossplay not enabled</td><td>Verify "Crossplay" is checked in world settings. On dedicated server, confirm <code>-crossplay</code> is in launch flags and restart.</td></tr>
+<tr><td><strong>Join Code not appearing (dedicated server)</strong></td><td>Server still initializing</td><td>Wait 30-60 seconds after server start. The Join Code appears after the world finishes loading.</td></tr>
+<tr><td><strong>Friends can't connect with Join Code</strong></td><td>Code entered incorrectly</td><td>Join Codes are case-sensitive 6-digit numbers. Have the host re-read it — 0 vs O, 1 vs I mix-ups are common.</td></tr>
+<tr><td><strong>"Server not found" error</strong></td><td>PlayFab connection blocked</td><td>Check your firewall/antivirus isn't blocking PlayFab traffic. Try temporarily disabling strict NAT settings on your router.</td></tr>
+<tr><td><strong>Code works but disconnects frequently</strong></td><td>Host's internet instability</td><td>Crossplay routes through the host — if their connection is unstable, everyone feels it. Switch to a dedicated server or have the player with the best internet host.</td></tr>
+<tr><td><strong>Join Code expired or changed</strong></td><td>Host restarted the world</td><td>Each time the host restarts the world, a new Join Code is generated. Check with the host for the new code.</td></tr>
+</tbody></table>
+
+<h2 id="cross-progression">5. Cross-Progression Rules</h2>
+<div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
+<p>Valheim's cross-progression (carrying your character and progress between platforms) is <strong>partial</strong>. Here's exactly what works and what doesn't:</p>
+
+<table><thead><tr><th>From → To</th><th>Steam</th><th>Xbox</th><th>MS Store / Game Pass</th></tr></thead><tbody>
+<tr><td><strong>Steam</strong></td><td>✅ Same account</td><td>❌ Not supported</td><td>❌ Not supported</td></tr>
+<tr><td><strong>Xbox</strong></td><td>❌ Not supported</td><td>✅ Same account</td><td>✅ Via Xbox cloud save</td></tr>
+<tr><td><strong>MS Store</strong></td><td>❌ Not supported</td><td>✅ Via Xbox cloud save</td><td>✅ Same account</td></tr>
+</tbody></table>
+
+<div class="tip-box"><strong>🔑 Key Takeaway:</strong> Xbox and Microsoft Store share progress through Xbox cloud saves — play on your Xbox, continue on your PC via Game Pass, and vice versa. Steam characters and worlds are completely separate and cannot be transferred to or from any other platform. If you plan to play on both console and PC, the Microsoft Store / Game Pass version gives you the most flexibility.</div>
+
+<h2 id="mods">6. Crossplay &amp; Mods — Your Two Options</h2>
+<p>Crossplay and mods <strong>cannot be used together</strong>. Crossplay uses PlayFab networking, which BepInEx (Valheim's mod loader) cannot hook into. And Xbox / Microsoft Store clients cannot load mods at all. You have two paths:</p>
+
+<table><thead><tr><th></th><th>Path A: Cross-Platform Group</th><th>Path B: Modded Group</th></tr></thead><tbody>
+<tr><td><strong>Who can play</strong></td><td>Steam + Xbox + Game Pass (any mix)</td><td>Steam only (everyone)</td></tr>
+<tr><td><strong>Mods</strong></td><td>❌ No mods allowed</td><td>✅ Full mod support (BepInEx)</td></tr>
+<tr><td><strong>Setup</strong></td><td>Enable Crossplay + share Join Code</td><td>Disable Crossplay + all install same mods via r2modman</td></tr>
+<tr><td><strong>Server type</strong></td><td>Peer-to-peer or dedicated with <code>-crossplay</code></td><td>Dedicated server with BepInEx (no <code>-crossplay</code>)</td></tr>
+<tr><td><strong>Best for</strong></td><td>Mixed-platform friend groups, vanilla gameplay</td><td>Groups that want QoL mods, new content, or custom difficulty</td></tr>
+</tbody></table>
+
+<h3>How to Switch Between the Two</h3>
+<p>You can switch a world from crossplay to modded (or vice versa), but it requires coordination:</p>
+<ol>
+<li><strong>Crossplay → Modded:</strong> Everyone must own the game on Steam. Host unchecks Crossplay, all players install matching mods via r2modman, restart the world.</li>
+<li><strong>Modded → Crossplay:</strong> Remove all mods from server and clients. Host checks Crossplay, share Join Code. Xbox/MS Store players can now join.</li>
+<li><strong>World file is shared:</strong> The world save itself is compatible with both modes — your buildings and progress persist regardless of which mode you're in.</li>
+</ol>
+<div class="tip-box"><strong>⚠️ Important:</strong> If you switch from modded to crossplay, any mod-added items, creatures, or structures in your world will be missing or broken. Do this only if you're willing to lose mod content.</div>
+
+<h2 id="faq">7. Frequently Asked Questions</h2>
+<div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
+
+<h3>Q: Is Valheim cross-platform on PS5?</h3>
+<p>Valheim will launch on PlayStation 5 alongside the Version 1.0 release in 2026. Iron Gate Studio has confirmed the PS5 version is in development. Once released, PS5 players will be able to crossplay with Steam, Xbox, and PC Game Pass through the standard Join Code system. Until then, PS5 players cannot join Valheim games.</p>
+
+<h3>Q: Is Valheim cross-platform PS4 and Xbox?</h3>
+<p>No. Valheim is not releasing on PS4 — the console release is for PlayStation 5 only. If you're on Xbox (One or Series X|S), you can already crossplay with Steam and PC Game Pass players using the Join Code method.</p>
+
+<h3>Q: Can Steam and Xbox play Valheim together?</h3>
+<p><strong>Yes.</strong> This is the most common crossplay scenario and it works seamlessly. The host (on either platform) enables Crossplay and shares the 6-digit Join Code. The other player enters the code in "Join Game" → "Add Server." Both players will see each other in-game within seconds.</p>
+
+<h3>Q: Is Valheim cross-platform with mods?</h3>
+<p><strong>No.</strong> This is a hard limitation — crossplay and mods are mutually exclusive. Crossplay uses PlayFab networking that BepInEx cannot hook into, and console clients cannot load mod files. If your group wants mods, everyone must play on Steam with crossplay disabled. See <a href="#mods">section 6</a> for a full comparison of your two options.</p>
+
+<h3>Q: Why is my Valheim Join Code not showing up?</h3>
+<p>The most common causes: (1) Crossplay isn't enabled — double-check the "Crossplay" box or <code>-crossplay</code> flag. (2) On a dedicated server, the code takes 30-60 seconds to appear after startup. (3) Firewall or antivirus blocking PlayFab traffic. (4) The pause menu Join Code location changed in a recent update — check both the main console output and the pause menu. See <a href="#join-code">section 4</a> for the full troubleshooting table.</p>
+
+<h3>Q: Does Valheim support cross-progression / cross-save?</h3>
+<p><strong>Partially.</strong> Characters and world progress transfer between Xbox consoles and the Microsoft Store (PC Game Pass) version through Xbox cloud saves — you can play on your Xbox, then continue on your PC. However, <strong>Steam is completely separate</strong> — Steam characters cannot be transferred to Xbox, Microsoft Store, or any other platform, and vice versa. If cross-progression matters to you, play the Microsoft Store / Game Pass version.</p>
+
+<h3>Q: Crossplay vs dedicated server — which is better?</h3>
+<p>They serve different needs. <strong>Crossplay (Join Code)</strong> is best for quick sessions with mixed-platform friends — zero setup, no port forwarding, works instantly. <strong>Dedicated servers</strong> are better for 24/7 worlds, large groups, or modded gameplay — but require technical setup (see our <a href="server-setup.html">Server Setup Guide</a>). You can combine both: a dedicated server with <code>-crossplay</code> flag gives you 24/7 uptime AND cross-platform access.</p>
+
+<h3>Q: Is Valheim on Nintendo Switch?</h3>
+<p>Valheim is not available on the original Nintendo Switch and likely never will be due to hardware limitations. However, a <strong>Nintendo Switch 2 version is expected alongside the Valheim 1.0 launch in 2026</strong>, with full crossplay support through the Join Code system.</p>
+
+<div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
+<div class="share-bar"><span>Share:</span> <a href="https://twitter.com/intent/tweet?url=https://valheims.com/crossplay-guide.html&text=Valheim Crossplay Guide — Is Valheim Cross-Platform?" target="_blank" rel="noopener">Twitter</a></div>
+<div class="feedback"><p>Was this guide helpful?</p><button onclick="clarity('event','feedback','yes')">👍 Yes</button><button onclick="clarity('event','feedback','no')">👎 No</button></div>
+</article>
+</main>
+<!-- #include footer.html -->
+<!-- #include scripts.html --></body></html>

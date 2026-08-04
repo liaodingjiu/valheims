@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚔️</text></svg>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Terms of Use — Valheim Guides</title>
 <meta name="description" content="Terms of Use for Valheim Guides. Conditions for using this website.">
@@ -18,13 +19,8 @@
   ]
 }
 </script>
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xny2nxsdez");
-</script>
+<link rel="preconnect" href="https://www.clarity.ms">
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "xny2nxsdez");</script>
 </head>
 <body>
 
@@ -38,11 +34,12 @@
     <div class="nav-right">
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="boss-order.html">Boss Order</a></li>
-        <li><a href="best-weapons.html">Best Weapons</a></li>
-        <li><a href="building-guide.html">Base Building</a></li>
-        <li><a href="biome-guide.html">Biome Guide</a></li>
-        <li><a href="beginner-guide.html">Beginner Guide</a></li>
+        <li><a href="progression/" style="color:var(--gold);font-weight:700;">Progression</a></li>
+        <li class="dropdown"><a href="guides-bosses.html">Bosses</a><ul class="dropdown-menu"><li><a href="boss-order.html">Boss Progression</a></li><li><a href="eikthyr-guide.html">Eikthyr</a></li><li><a href="elder-guide.html">The Elder</a></li><li><a href="bonemass-guide.html">Bonemass</a></li><li><a href="moder-guide.html">Moder</a></li><li><a href="yagluth-guide.html">Yagluth</a></li><li><a href="queen-guide.html">The Queen</a></li><li><a href="fader-guide.html">Fader</a></li></ul></li>
+        <li class="dropdown"><a href="guides-equipment.html">Equipment</a><ul class="dropdown-menu"><li><a href="best-weapons.html">Best Weapons</a></li><li><a href="armor-guide.html">Armor Sets</a></li><li><a href="food-recipes.html">Food &amp; Cooking</a></li></ul></li>
+        <li class="dropdown"><a href="guides-world.html">World</a><ul class="dropdown-menu"><li><a href="biome-guide.html">Biomes</a></li><li><a href="base-locations.html">Best Base Locations</a></li><li><a href="ashlands-guide.html">Ashlands</a></li><li><a href="deep-north-guide.html">Deep North</a></li><li><a href="sailing-guide.html">Sailing</a></li><li><a href="traders-guide.html">Traders</a></li><li><a href="farming-guide.html">Farming</a></li></ul></li>
+        <li class="dropdown"><a href="guides-survival.html">Survival</a><ul class="dropdown-menu"><li><a href="building-guide.html">Base Building</a></li><li><a href="base-defense.html">Base Defense</a></li><li><a href="taming-guide.html">Taming</a></li><li><a href="beginner-guide.html">Beginner Guide</a></li></ul></li>
+        <li class="dropdown"><a href="guides-technical.html">Technical</a><ul class="dropdown-menu"><li><a href="server-setup.html">Server Setup</a></li><li><a href="crossplay-guide.html">Crossplay</a></li><li><a href="known-issues.html">Known Issues</a></li><li><a href="mods-guide.html">Mods</a></li><li><a href="console-commands.html">Commands</a></li><li><a href="multiplayer-guide.html">Multiplayer</a></li></ul></li>
       </ul>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
         <span class="sun">☀️</span>
@@ -102,15 +99,71 @@
 </main>
 
 <footer>
-  <p>Valheim Guides — The independent Valheim resource. Not affiliated with Iron Gate Studio.</p>
-  <p style="margin-top:8px">Valheim and all related content are trademarks of Iron Gate Studio AB.</p>
-  <p style="margin-top:8px">
-    <a href="about.html">About</a> &nbsp;|&nbsp;
-    <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp;
-    <a href="terms.html">Terms of Use</a> &nbsp;|&nbsp;
-    <a href="contact.html">Contact</a> &nbsp;|&nbsp;
-    <a href="sitemap.xml">Sitemap</a>
-  </p>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Bosses</h4>
+      <ul>
+        <li><a href="boss-order.html">Boss Progression</a></li>
+        <li><a href="eikthyr-guide.html">Eikthyr</a></li>
+        <li><a href="elder-guide.html">The Elder</a></li>
+        <li><a href="bonemass-guide.html">Bonemass</a></li>
+        <li><a href="moder-guide.html">Moder</a></li>
+        <li><a href="yagluth-guide.html">Yagluth</a></li>
+        <li><a href="queen-guide.html">The Queen</a></li>
+        <li><a href="fader-guide.html">Fader</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Equipment</h4>
+      <ul>
+        <li><a href="best-weapons.html">Best Weapons</a></li>
+        <li><a href="armor-guide.html">Armor Sets</a></li>
+        <li><a href="food-recipes.html">Food &amp; Cooking</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>World</h4>
+      <ul>
+        <li><a href="biome-guide.html">All Biomes</a></li>
+        <li><a href="base-locations.html">Best Base Locations</a></li>
+        <li><a href="ashlands-guide.html">Ashlands</a></li>
+        <li><a href="deep-north-guide.html">Deep North</a></li>
+        <li><a href="sailing-guide.html">Sailing</a></li>
+        <li><a href="traders-guide.html">Traders</a></li>
+        <li><a href="farming-guide.html">Farming</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Survival</h4>
+      <ul>
+        <li><a href="building-guide.html">Base Building</a></li>
+        <li><a href="base-defense.html">Base Defense</a></li>
+        <li><a href="taming-guide.html">Taming &amp; Breeding</a></li>
+        <li><a href="beginner-guide.html">Beginner Guide</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Technical</h4>
+      <ul>
+        <li><a href="server-setup.html">Server Setup</a></li>
+        <li><a href="crossplay-guide.html">Crossplay</a></li>
+        <li><a href="known-issues.html">Known Issues</a></li>
+        <li><a href="mods-guide.html">Mods</a></li>
+        <li><a href="console-commands.html">Commands</a></li>
+        <li><a href="multiplayer-guide.html">Multiplayer</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p><strong>Valheim Guides</strong> — The independent Valheim resource. Not affiliated with Iron Gate Studio. Valheim and all related content are trademarks of Iron Gate Studio AB.</p>
+    <p class="footer-legal">
+      <a href="about.html">About</a> &nbsp;|&nbsp;
+      <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp;
+      <a href="terms.html">Terms of Use</a> &nbsp;|&nbsp;
+      <a href="contact.html">Contact</a> &nbsp;|&nbsp;
+      <a href="sitemap.xml">Sitemap</a>
+    </p>
+  </div>
 </footer>
 
 <button class="back-top" id="backTop" aria-label="Back to top" title="Back to top">↑</button>
@@ -127,11 +180,15 @@
     localStorage.setItem('valheim-theme', next);
   });
   var btn = document.getElementById('backTop');
-  window.addEventListener('scroll', function() {
-    btn.style.display = window.scrollY > 400 ? 'flex' : 'none';
-  });
-  btn.addEventListener('click', function() { window.scrollTo({top: 0, behavior: 'smooth'}); });
+  window.addEventListener('scroll', function() { btn.classList.toggle('visible', window.scrollY > 500); });
+  btn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 })();
-</script>
-</body>
+function handleFeedback(type) {
+  document.querySelectorAll('.feedback-btn').forEach(function(b) { b.classList.remove('voted'); });
+  if (type === 'yes') document.querySelector('.feedback-btns .feedback-btn:first-child').classList.add('voted');
+  if(window.clarity){window.clarity("event","feedback",type);}
+  if (type === 'no') document.querySelector('.feedback-btns .feedback-btn:last-child').classList.add('voted');
+  if(window.clarity){window.clarity("event","feedback",type);}
+}
+</script></body>
 </html>
