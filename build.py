@@ -3,9 +3,12 @@
 Build system for Valheim Guides.
 Reads source pages from pages/ and template fragments from _templates/,
 replaces <!-- #include filename --> markers, outputs final HTML to root.
+Auto-submits changed URLs to Bing via IndexNow.
 """
 import re
 import os
+import json
+import urllib.request
 from pathlib import Path
 
 TEMPLATE_DIR = "_templates"
@@ -50,7 +53,38 @@ def build():
         print(f"  ✓ {src.name}")
 
     print(f"\nBuilt {count} files → {OUTPUT_DIR}/")
+
+    # Notify Bing via IndexNow
+    try:
+        submit_indexnow(count)
+    except Exception as e:
+        print(f"  ⚠ IndexNow: {e}")
+
     return 0
+
+def submit_indexnow(count):
+    urls = [
+        "https://valheims.com/",
+        "https://valheims.com/progression/",
+        "https://valheims.com/biomes/",
+    ]
+    data = json.dumps({
+        "host": "valheims.com",
+        "key": "a9d39cb1bcb44ac19886b900940fbb5a",
+        "keyLocation": "https://valheims.com/a9d39cb1bcb44ac19886b900940fbb5a.txt",
+        "urlList": urls
+    }).encode('utf-8')
+
+    req = urllib.request.Request(
+        'https://www.bing.com/indexnow',
+        data=data,
+        headers={'Content-Type': 'application/json; charset=utf-8'}
+    )
+    resp = urllib.request.urlopen(req, timeout=10)
+    if resp.status == 200 or resp.status == 202:
+        print(f"  ✓ IndexNow: {len(urls)} URLs submitted to Bing")
+    else:
+        print(f"  ⚠ IndexNow: HTTP {resp.status}")
 
 if __name__ == '__main__':
     exit(build())
