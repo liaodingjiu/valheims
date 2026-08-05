@@ -42,11 +42,12 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "Can you play Valheim multiplayer?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Valheim supports multiplayer for up to 10 players. You can host a world locally and invite friends via Steam, set up a dedicated server for persistent worlds, or join community servers." } },
-    { "@type": "Question", "name": "How many players can join a Valheim server?", "acceptedAnswer": { "@type": "Answer", "text": "Valheim supports up to 10 players on a single server by default. Dedicated servers can be configured for fewer or more players with mods, but 10 is the official maximum for balanced gameplay and boss difficulty scaling." } },
-    { "@type": "Question", "name": "Does Valheim support crossplay?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Valheim supports crossplay between Steam (PC), Xbox, PlayStation 5, and Nintendo Switch 2. Crossplay must be enabled in server settings. Some mods may break crossplay compatibility." } },
-    { "@type": "Question", "name": "Should I use a dedicated server for Valheim?", "acceptedAnswer": { "@type": "Answer", "text": "A dedicated server is ideal for groups playing at different times, long-term worlds, or communities. It stays online 24/7. For casual co-op with 2-3 friends, hosting locally via Steam is simpler and free." } },
-    { "@type": "Question", "name": "How do I play Valheim with friends?", "acceptedAnswer": { "@type": "Answer", "text": "Start a world and check 'Start server' or join a friend via Steam friends list. For dedicated servers, your friends connect using the server IP or by searching the community server list. Crossplay must be enabled if playing across platforms." } }
+    { "@type": "Question", "name": "Can you play Valheim multiplayer?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Valheim supports multiplayer for up to 10 players. Host locally and invite via Steam, set up a dedicated server for 24/7 worlds, or join community servers. Co-op makes building, exploring and boss fights more social." } },
+    { "@type": "Question", "name": "How do I invite friends to my Valheim world?", "acceptedAnswer": { "@type": "Answer", "text": "Start a world, check Start server and set a password. Friends join via Steam profile, by searching the server name, or by using a join code with crossplay enabled." } },
+    { "@type": "Question", "name": "How many players can join a Valheim server?", "acceptedAnswer": { "@type": "Answer", "text": "Valheim supports up to 10 players by default. Boss HP scales with nearby players. The game is designed around small groups, not large-scale multiplayer." } },
+    { "@type": "Question", "name": "What is the difference between a hosted world and a dedicated server?", "acceptedAnswer": { "@type": "Answer", "text": "A hosted world only runs while the host is online. A dedicated server runs 24/7 independently. Hosted is simpler for small groups. Dedicated is better for groups playing at different times." } },
+    { "@type": "Question", "name": "Does Valheim support crossplay?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, between Steam, Xbox, PS5 and Switch 2. Crossplay must be enabled in server settings. Join codes work across all platforms. Mods may break crossplay." } },
+    { "@type": "Question", "name": "Does progress carry over in multiplayer?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. World progress stays with that world. Boss kills are shared. Your character inventory and skills stay with you — you can bring the same character to different worlds." } }
   ]
 }
 </script>
@@ -184,23 +185,27 @@
   <div class="faq-list">
     <details class="faq-item">
       <summary>Can you play Valheim multiplayer?</summary>
-      <div class="faq-a">Yes, Valheim supports multiplayer for up to 10 players. You can host a world locally and invite friends via Steam, set up a dedicated server for a persistent 24/7 world, or join community servers. Local hosting is free and easiest for casual play. <a href="../multiplayer-guide.html" style="color:var(--green);font-weight:600;">Multiplayer basics →</a></div>
+      <div class="faq-a">Yes, Valheim supports multiplayer for up to 10 players. You can host a world locally and invite friends via Steam, set up a dedicated server for a persistent 24/7 world, or join community servers. Valheim works well in both single-player and co-op — but many players feel it is especially fun with friends because building, exploring, and boss fights become more social and less punishing. <a href="../multiplayer-guide.html" style="color:var(--green);font-weight:600;">Multiplayer basics →</a></div>
+    </details>
+    <details class="faq-item">
+      <summary>How do I invite friends to my Valheim world?</summary>
+      <div class="faq-a">Start a world, check "Start server" and set a password if you want privacy. Friends can join through your Steam profile (right-click → Join Game), by searching the server name in the community list, or by using a join code if crossplay is enabled. You can also make the server public or keep it private depending on your setup. <a href="../multiplayer-guide.html" style="color:var(--green);font-weight:600;">Multiplayer setup guide →</a></div>
     </details>
     <details class="faq-item">
       <summary>How many players can join a Valheim server?</summary>
-      <div class="faq-a">Valheim supports up to 10 players on a single server by default. Boss HP scales with the number of nearby players, so larger groups face tougher fights. Dedicated servers can be configured for fewer or more than 10 players with mods, but 10 is the official maximum for balanced gameplay.</div>
+      <div class="faq-a">Valheim supports up to 10 players on a single server by default. Boss HP and enemy damage scale with the number of nearby players, so larger groups face tougher fights — but also have more hands for combat, resource gathering, and base building. Some third-party hosts may offer higher slot counts, but the game is officially designed around small groups.</div>
+    </details>
+    <details class="faq-item">
+      <summary>What is the difference between a hosted world and a dedicated server?</summary>
+      <div class="faq-a">A hosted world only runs while the host player is online and running that world — if the host goes offline, nobody can play. A dedicated server runs independently 24/7 and anyone can join at any time. Hosted worlds are simpler for small friend groups who always play together. Dedicated servers are better for groups who play at different times or want persistent access. <a href="../server-setup.html" style="color:var(--green);font-weight:600;">Server setup guide →</a></div>
     </details>
     <details class="faq-item">
       <summary>Does Valheim support crossplay?</summary>
-      <div class="faq-a">Yes, Valheim supports crossplay between Steam (PC), Xbox, PlayStation 5, and Nintendo Switch 2. Crossplay must be enabled in server settings — it is off by default. Join codes work across all platforms. Some mods break crossplay compatibility, so keep your server vanilla if crossplay is important. <a href="../crossplay-guide.html" style="color:var(--green);font-weight:600;">Complete crossplay guide →</a></div>
+      <div class="faq-a">Yes, Valheim supports crossplay between Steam (PC), Xbox, PlayStation 5, and Nintendo Switch 2. Crossplay must be enabled in server settings — it is off by default. Join codes work across all platforms. Some players prefer to disable crossplay for the smoothest connection on PC. Modded servers may break crossplay compatibility. <a href="../crossplay-guide.html" style="color:var(--green);font-weight:600;">Complete crossplay guide →</a></div>
     </details>
     <details class="faq-item">
-      <summary>Should I use a dedicated server for Valheim?</summary>
-      <div class="faq-a">A dedicated server is ideal for groups who play at different times, long-term worlds, or communities of 5+ players. The server runs 24/7 independently — no host needs to be online. For casual co-op with 2-3 friends who always play together, hosting locally via Steam is simpler and costs nothing. <a href="../server-setup.html" style="color:var(--green);font-weight:600;">Server setup guide →</a></div>
-    </details>
-    <details class="faq-item">
-      <summary>How do I play Valheim with friends?</summary>
-      <div class="faq-a">Start a world, check "Start server" and set a password. Friends join via your Steam profile or by searching the server name. For dedicated servers, share the IP address and port. Crossplay users can join via join code. If hosting behind a router, you may need to configure port forwarding (UDP 2456-2458). <a href="../beginner-guide.html" style="color:var(--green);font-weight:600;">Beginner guide →</a></div>
+      <summary>Does progress carry over in multiplayer?</summary>
+      <div class="faq-a">Yes. World progress — everything built, collected, or defeated — stays with that world. Boss kills are shared across all players on the server. Your character data (inventory, skills, Forsaken Powers) stays with you, which means you can bring the same character into different worlds. This is useful for bringing gear from your main world to help a friend's new world.</div>
     </details>
   </div>
 </section>
