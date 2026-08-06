@@ -84,10 +84,15 @@ def update_sitemap():
     s = path.read_text(encoding="utf-8")
 
     def clean_loc(m):
-        loc = m.group(1)
+        loc = m.group(1).strip()
+        if loc.startswith("/https://"):
+            loc = loc[1:]  # repair a previously broken relative URL
+        elif loc.startswith("/"):
+            loc = "https://valheims.com" + loc
         if loc.endswith(".html"):
-            name = loc[:-5]
-            loc = "/" if name == "index" else "/" + name
+            loc = loc[:-5]
+            if loc.endswith("/index"):
+                loc = loc[:-6] + "/"
         return f"<loc>{loc}</loc>"
 
     today = datetime.date.today().isoformat()
