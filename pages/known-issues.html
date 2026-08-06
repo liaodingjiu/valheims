@@ -5,7 +5,7 @@
 <title>Valheim Known Issues &amp; Fixes: Crashes &amp; Saves</title>
 <meta name="description" content="Why Valheim crashes, how to recover lost items, fix INCOMPATIBLE_VERSION errors, and solve multiplayer problems — community-tested fixes for common bugs.">
 <meta name="keywords" content="Valheim bugs, Valheim known issues, Valheim crash fix, Valheim lost items, Valheim save corrupted, Valheim Vulkan crash, Valheim creature AI bug, Valheim incompatible version, Valheim mod bugs, Valheim server issues">
-<meta name="robots" content="index, follow"><link rel="canonical" href="https://valheims.com/known-issues.html"><link rel="stylesheet" href="shared.css">
+<meta name="robots" content="index, follow"><link rel="canonical" href="https://valheims.com/known-issues"><link rel="stylesheet" href="shared.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -16,7 +16,7 @@
   "publisher": { "@id": "https://valheims.com/#org" },
   "datePublished": "2026-07-20",
   "dateModified": "2026-07-20",
-  "mainEntityOfPage": "https://valheims.com/known-issues.html"
+  "mainEntityOfPage": "https://valheims.com/known-issues"
 }
 </script>
 <script type="application/ld+json">
@@ -25,7 +25,7 @@
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://valheims.com/" },
-    { "@type": "ListItem", "position": 2, "name": "Known Issues", "item": "https://valheims.com/known-issues.html" }
+    { "@type": "ListItem", "position": 2, "name": "Known Issues", "item": "https://valheims.com/known-issues" }
   ]
 }
 </script>
@@ -108,7 +108,7 @@
 <!-- #include nav.html -->
 <main class="container with-sidebar">
 <!-- #include sidebar-technical.html -->
-<article class="content-main"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> &raquo; <span>Known Issues &amp; Fixes</span></nav>
+<article class="content-main"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> &raquo; <span>Known Issues &amp; Fixes</span></nav>
 <div class="ad-placeholder">[ AdSense Ad Unit — Responsive Leaderboard ]</div>
 <section class="hero"><h1>Valheim Known Issues &amp; Fixes 2026</h1><p>Community-sourced list of Valheim bugs, crashes, and known issues — with workarounds where available. Sourced from Reddit r/valheim, Steam Community Bug Reports, and official patch notes. Last updated: July 20, 2026. Covers Vulkan crashes, Intel CPU instability, lost items after crashes, creature AI bugs, multiplayer connection problems, mod-specific issues, and more.</p></section>
 <nav class="toc"><h2>On This Page</h2><ol><li><a href="#crashes">Crashes &amp; Performance</a></li><li><a href="#saves">Save &amp; Item Recovery</a></li><li><a href="#creatures">Creature AI &amp; Boss Bugs</a></li><li><a href="#multiplayer">Multiplayer &amp; Server Issues</a></li><li><a href="#mods">Mod-Specific Issues</a></li><li><a href="#other">Other Known Issues</a></li><li><a href="#report">How to Report Bugs</a></li><li><a href="#faq">FAQ</a></li></ol></nav>
@@ -153,14 +153,14 @@
 <div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
 <table><thead><tr><th>Issue</th><th>Cause</th><th>Fix</th></tr></thead><tbody>
 <tr><td><strong>INCOMPATIBLE_VERSION Error</strong></td><td>Client auto-updated but server hasn't. Or players are on different Steam branches (public-test vs default).</td><td>Update your dedicated server. Ensure all players and server are on the same Steam branch. Compare Build IDs to verify they match. See <a href="https://supercraft.host/wiki/valheim/incompatible_version_after_update/" rel="noopener">Build ID guide</a>.</td></tr>
-<tr><td><strong>Connection Failed / Can't Join Server</strong></td><td>Killer Network Software (common on MSI PCs) interferes with Valheim networking. Or crossplay + IP direct connection conflict.</td><td>Uninstall Killer Network software. Use Join Code for crossplay — don't mix crossplay with direct IP connections. See our <a href="crossplay-guide.html">Crossplay Guide</a>.</td></tr>
+<tr><td><strong>Connection Failed / Can't Join Server</strong></td><td>Killer Network Software (common on MSI PCs) interferes with Valheim networking. Or crossplay + IP direct connection conflict.</td><td>Uninstall Killer Network software. Use Join Code for crossplay — don't mix crossplay with direct IP connections. See our <a href="/crossplay-guide">Crossplay Guide</a>.</td></tr>
 <tr><td><strong>Players Thrown Off Boats During Saves</strong></td><td>The game briefly pauses during auto-save, which can desync boat physics and throw players off — especially at sea.</td><td>Slow down before auto-save triggers (every 30 min). Use <code>/save</code> command while stationary to control save timing.</td></tr>
 <tr><td><strong>Server Rubberbanding / Desync</strong></td><td>Host's internet instability, CPU bottleneck on server, or too many players/instances in one area.</td><td>Switch to a dedicated server with more resources. Reduce tamed animals and loose items in the area. Have the player with the best internet host peer-to-peer games.</td></tr>
 </tbody></table>
 
 <h2 id="mods">5. Mod-Specific Issues</h2>
 <div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
-<div class="tip-box"><strong>⚠️ General Mod Warning:</strong> 90% of crash reports on the Steam Bug forum are mod-related. After every Valheim update, mods break. Always: (1) update BepInEx and all mods after a patch, (2) verify game files through Steam, (3) test in vanilla before reporting a bug. Crossplay and mods are mutually exclusive — see our <a href="crossplay-guide.html">Crossplay Guide</a>.</div>
+<div class="tip-box"><strong>⚠️ General Mod Warning:</strong> 90% of crash reports on the Steam Bug forum are mod-related. After every Valheim update, mods break. Always: (1) update BepInEx and all mods after a patch, (2) verify game files through Steam, (3) test in vanilla before reporting a bug. Crossplay and mods are mutually exclusive — see our <a href="/crossplay-guide">Crossplay Guide</a>.</div>
 
 <table><thead><tr><th>Mod / Issue</th><th>Bug</th><th>Status / Fix</th></tr></thead><tbody>
 <tr><td><strong>ValheimRAFT — Player Launched Into Sky</strong></td><td>Using Modor power + speed 2 on a ValheimRAFT ship throws the driver off the wheel. Player is launched into the stratosphere (5-8 minute fall) or ejected into the ocean. Boat continues running onto land. Speed 3 is "nearly instantly catastrophic."</td><td>No known fix. Community consensus: ValheimRAFT is one of the buggiest mods. Recommendation: uninstall and don't look back.</td></tr>
@@ -173,7 +173,7 @@
 <div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
 <table><thead><tr><th>Issue</th><th>Description</th><th>Workaround</th></tr></thead><tbody>
 <tr><td><strong>Display Input Bugs (Mac)</strong></td><td>After the Mac release update: right-clicking with a hammer tabs out of fullscreen onto a second monitor. Using a hoe to raise ground triggers auto-sprinting.</td><td>Reset keybinds to default. If persistent, fully reinstall the game.</td></tr>
-<tr><td><strong>Furnaces / Kilns "Turning Off"</strong></td><td>Furnaces and kilns stop working randomly. <strong>This is usually not a bug</strong> — blocked smoke exhaust (roof too low, no ventilation) causes them to shut down.</td><td>Ensure at least 2 meters of clear space above the furnace/kiln with open ventilation. If smoke can't escape, they stop. See our <a href="building-guide.html">Base Building Guide</a>.</td></tr>
+<tr><td><strong>Furnaces / Kilns "Turning Off"</strong></td><td>Furnaces and kilns stop working randomly. <strong>This is usually not a bug</strong> — blocked smoke exhaust (roof too low, no ventilation) causes them to shut down.</td><td>Ensure at least 2 meters of clear space above the furnace/kiln with open ventilation. If smoke can't escape, they stop. See our <a href="/building-guide">Base Building Guide</a>.</td></tr>
 <tr><td><strong>Auto-Pickup Not Working</strong></td><td>Items on the ground are not automatically picked up.</td><td>The default toggle key is <strong>V</strong>. You may have accidentally pressed it. Check keybind settings if it's still not working.</td></tr>
 <tr><td><strong>Resolution Settings Erratic in Windowed Mode</strong></td><td>Resolution behaves unpredictably when switching between fullscreen and windowed.</td><td>Fixed in Patch 0.221.12 (Feb 2026). If still occurring, update your game and GPU drivers.</td></tr>
 <tr><td><strong>Audio Stutters in Ashlands</strong></td><td>Audio crackling and stuttering in Ashlands biome.</td><td>Fixed in Patch 0.221.12 (Feb 2026). If still occurring, verify game files and update audio drivers.</td></tr>
@@ -210,13 +210,13 @@
 <p>This is nearly always caused by the world name being accidentally changed in your server settings or launch parameters. When the name doesn't match an existing save file, Valheim creates a brand new world. Check your config or launch flags, set the world name back to its exact original spelling (capitalization matters), and restart. Don't delete anything — your old world files are still on disk.</p>
 
 <h3>Q: Can I use mods and crossplay together?</h3>
-<p><strong>No.</strong> Crossplay uses PlayFab networking which BepInEx cannot hook into, and Xbox/Microsoft Store clients cannot load mod files at all. If your group wants mods, everyone must be on Steam with crossplay disabled. If you want cross-platform play, you must go unmodded. There is no workaround — this is a hard technical limitation. See our <a href="crossplay-guide.html">Crossplay Guide</a> for the full details.</p>
+<p><strong>No.</strong> Crossplay uses PlayFab networking which BepInEx cannot hook into, and Xbox/Microsoft Store clients cannot load mod files at all. If your group wants mods, everyone must be on Steam with crossplay disabled. If you want cross-platform play, you must go unmodded. There is no workaround — this is a hard technical limitation. See our <a href="/crossplay-guide">Crossplay Guide</a> for the full details.</p>
 
 <h3>Q: How do I report a bug to the Valheim developers?</h3>
 <p>Submit bugs through <a href="https://valheim.com/support" rel="noopener noreferrer">valheim.com/support</a>, the <a href="https://steamcommunity.com/app/892970/discussions/1/" rel="noopener noreferrer">Steam Bugs &amp; Technical Issues forum</a>, or the official <a href="https://discord.gg/valheim" rel="noopener noreferrer">Valheim Discord</a> #bug-reports channel. Include your platform, whether you use mods, steps to reproduce, and your system specs. The devs monitor all three channels.</p>
 
 <div class="ad-placeholder">[ AdSense Ad Unit — Responsive Rectangle ]</div>
-<div class="share-bar"><span>Share:</span> <a href="https://twitter.com/intent/tweet?url=https://valheims.com/known-issues.html&text=Valheim Known Issues & Fixes — Community-sourced bug list" target="_blank" rel="noopener">Twitter</a></div>
+<div class="share-bar"><span>Share:</span> <a href="https://twitter.com/intent/tweet?url=https://valheims.com/known-issues&text=Valheim Known Issues & Fixes — Community-sourced bug list" target="_blank" rel="noopener">Twitter</a></div>
 <div class="feedback"><p>Was this guide helpful? Did we miss a bug?</p><button onclick="clarity('event','feedback','yes')">👍 Yes</button><button onclick="clarity('event','feedback','no')">👎 No</button></div>
 </article>
 </main>

@@ -8,6 +8,7 @@ Auto-submits changed URLs to Bing via IndexNow.
 import re
 import os
 import json
+import datetime
 import urllib.request
 from pathlib import Path
 
@@ -64,6 +65,12 @@ def build():
 
     print(f"\nBuilt {count} files → {OUTPUT_DIR}/")
 
+    # Refresh sitemap lastmod so search engines re-crawl changed pages
+    try:
+        update_sitemap()
+    except Exception as e:
+        print(f"  ⚠ sitemap: {e}")
+
     # Notify Bing via IndexNow
     try:
         submit_indexnow(count)
@@ -71,6 +78,23 @@ def build():
         print(f"  ⚠ IndexNow: {e}")
 
     return 0
+
+def update_sitemap():
+    path = Path(OUTPUT_DIR) / "sitemap.xml"
+    s = path.read_text(encoding="utf-8")
+
+    def clean_loc(m):
+        loc = m.group(1)
+        if loc.endswith(".html"):
+            name = loc[:-5]
+            loc = "/" if name == "index" else "/" + name
+        return f"<loc>{loc}</loc>"
+
+    today = datetime.date.today().isoformat()
+    s = re.sub(r"<loc>(.*?)</loc>", clean_loc, s)
+    s = re.sub(r"<lastmod>[^<]*</lastmod>", f"<lastmod>{today}</lastmod>", s)
+    path.write_text(s, encoding="utf-8")
+    print(f"  ✓ sitemap.xml updated ({today})")
 
 def submit_indexnow(count):
     urls = [
