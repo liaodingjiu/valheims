@@ -5,7 +5,7 @@
 <title>Valheim Trader Guide — Haldor, Hildir &amp; Bog Witch Locations, Items &amp; Maps | Valheim Guides</title>
 <meta name="description" content="Complete Valheim trader guide. How to find Haldor and Hildir with seed maps, spawn mechanics, detection range, and full item stock lists. All trader locations and strategies.">
 <meta name="keywords" content="Valheim Haldor location, Valheim Hildir find, Valheim trader map, Valheim merchant guide, Valheim Bog Witch, Valheim trader items, Valheim world seed trader">
-<meta name="robots" content="index, follow"><link rel="canonical" href="https://valheims.com/traders-guide.html"><link rel="stylesheet" href="shared.css">
+<meta name="robots" content="index, follow"><link rel="canonical" href="https://valheims.com/traders-guide.html"><script>(function(){try{var t=localStorage.getItem('valheim-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script><link rel="stylesheet" href="shared.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -231,6 +231,18 @@
   var btn = document.getElementById('backTop');
   window.addEventListener('scroll', function() { btn.classList.toggle('visible', window.scrollY > 500); });
   btn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  var dropdownLinks = document.querySelectorAll('.nav-links .dropdown > a');
+  dropdownLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        var item = link.parentElement;
+        var wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.nav-links .dropdown.open').forEach(function(o) { o.classList.remove('open'); });
+        if (!wasOpen) item.classList.add('open');
+      }
+    });
+  });
 })();
 function handleFeedback(type) {
   document.querySelectorAll('.feedback-btn').forEach(function(b) { b.classList.remove('voted'); });

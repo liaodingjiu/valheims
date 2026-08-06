@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Complete Valheim Guide (2026)">
 <meta name="twitter:description" content="Complete Valheim guide — progression, biomes, bosses, gear & survival. From Meadows to Ashlands.">
-<link rel="stylesheet" href="shared.css">
+<script>(function(){try{var t=localStorage.getItem('valheim-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script><link rel="stylesheet" href="shared.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -115,7 +115,7 @@
   </div>
   <a href="progression/" class="hero-cta">Start Progression Guide ↓</a>
   <figure class="hero-image">
-    <img src="images/hero-valheim-warrior.webp" alt="Valheim warrior in bear armor standing ready for battle. Official Valheim key art." loading="eager" width="1200" height="675">
+    <img src="images/hero-valheim-warrior.webp" alt="Valheim warrior in bear armor standing ready for battle. Official Valheim key art." loading="eager" fetchpriority="high" decoding="async" width="1200" height="675">
   </figure>
 </section>
 
@@ -416,6 +416,18 @@
   var btn = document.getElementById('backTop');
   window.addEventListener('scroll', function() { btn.classList.toggle('visible', window.scrollY > 500); });
   btn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  var dropdownLinks = document.querySelectorAll('.nav-links .dropdown > a');
+  dropdownLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        var item = link.parentElement;
+        var wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.nav-links .dropdown.open').forEach(function(o) { o.classList.remove('open'); });
+        if (!wasOpen) item.classList.add('open');
+      }
+    });
+  });
 })();
 function handleFeedback(type) {
   document.querySelectorAll('.feedback-btn').forEach(function(b) { b.classList.remove('voted'); });

@@ -5,7 +5,7 @@
 <title>Valheim Ashlands Biome Guide 2026 — Flametal, Charred Fortresses &amp; Fader | Valheim Guides</title>
 <meta name="description" content="Complete Valheim Ashlands biome guide. How to survive the volcanic wasteland, mine Flametal, raid Charred Fortresses, craft Ask/Embla/Flametal armor, and defeat Fader. Landing strategy and preparation tips.">
 <meta name="keywords" content="Valheim Ashlands guide, Valheim Ashlands biome, Valheim Flametal, Valheim Charred Fortress, Valheim Ask armor, Valheim Embla armor, Valheim Ashlands landing">
-<meta name="robots" content="index, follow"><link rel="canonical" href="https://valheims.com/ashlands-guide.html"><link rel="stylesheet" href="shared.css">
+<meta name="robots" content="index, follow"><link rel="canonical" href="https://valheims.com/ashlands-guide.html"><script>(function(){try{var t=localStorage.getItem('valheim-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script><link rel="stylesheet" href="shared.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -233,6 +233,18 @@
   var btn = document.getElementById('backTop');
   window.addEventListener('scroll', function() { btn.classList.toggle('visible', window.scrollY > 500); });
   btn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  var dropdownLinks = document.querySelectorAll('.nav-links .dropdown > a');
+  dropdownLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        var item = link.parentElement;
+        var wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.nav-links .dropdown.open').forEach(function(o) { o.classList.remove('open'); });
+        if (!wasOpen) item.classList.add('open');
+      }
+    });
+  });
 })();
 function handleFeedback(type) {
   document.querySelectorAll('.feedback-btn').forEach(function(b) { b.classList.remove('voted'); });

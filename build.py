@@ -17,6 +17,9 @@ OUTPUT_DIR = "."
 
 INCLUDE_RE = re.compile(r'<!-- #include (.+?) -->')
 
+THEME_HEAD_SCRIPT = ("<script>(function(){try{var t=localStorage.getItem('valheim-theme');"
+                     "if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>")
+
 def load_template(name):
     path = os.path.join(TEMPLATE_DIR, name)
     if os.path.exists(path):
@@ -29,6 +32,13 @@ def resolve_includes(content, page_name):
         tmpl_name = match.group(1)
         return load_template(tmpl_name)
     return INCLUDE_RE.sub(replacer, content)
+
+def inject_theme_script(content):
+    """Apply the saved theme before first paint to avoid a flash of the wrong theme."""
+    marker = '<link rel="stylesheet" href="shared.css">'
+    if marker in content:
+        return content.replace(marker, THEME_HEAD_SCRIPT + marker, 1)
+    return content.replace("<head>", "<head>\n" + THEME_HEAD_SCRIPT, 1)
 
 def build():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -43,7 +53,7 @@ def build():
         with open(src, 'r') as f:
             content = f.read()
 
-        output = resolve_includes(content, src.name)
+        output = inject_theme_script(resolve_includes(content, src.name))
 
         out_path = Path(OUTPUT_DIR) / src.name
         with open(out_path, 'w') as f:
@@ -67,6 +77,14 @@ def submit_indexnow(count):
         "https://valheims.com/",
         "https://valheims.com/progression/",
         "https://valheims.com/biomes/",
+        "https://valheims.com/multiplayer/",
+        "https://valheims.com/boss-order.html",
+        "https://valheims.com/best-weapons.html",
+        "https://valheims.com/beginner-guide.html",
+        "https://valheims.com/building-guide.html",
+        "https://valheims.com/biome-guide.html",
+        "https://valheims.com/server-setup.html",
+        "https://valheims.com/crossplay-guide.html",
     ]
     data = json.dumps({
         "host": "valheims.com",

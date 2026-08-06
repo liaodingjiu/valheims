@@ -3,7 +3,7 @@
 <head><meta charset="UTF-8"><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚔️</text></svg>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Eikthyr Boss Guide — Valheim First Boss Strategy, Summoning &amp; Rewards | Valheim Guides</title>
-<meta name="description" content="Complete Eikthyr boss guide for Valheim. How to summon and beat the first Forsaken boss. <a href="progression/">Where does Eikthyr fit in the full progression? →</a> in the Meadows. Attack patterns, weaknesses, best weapons, prep checklist, and Forsaken power reward.">
+<meta name="description" content="Complete Eikthyr boss guide for Valheim. How to summon and beat the first Forsaken boss, where Eikthyr fits in the full progression through the Meadows. Attack patterns, weaknesses, best weapons, prep checklist, and Forsaken power reward.">
 <meta name="keywords" content="Valheim Eikthyr guide, Valheim first boss, Eikthyr summoning, Eikthyr strategy, Valheim Meadows boss, Eikthyr Forsaken power, Valheim beginner boss">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://valheims.com/eikthyr-guide.html">
@@ -14,7 +14,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Eikthyr Boss Guide — Valheim First Boss">
 <meta name="twitter:description" content="Complete Eikthyr strategy guide with summoning, weaknesses, best weapons, and Forsaken power.">
-<link rel="stylesheet" href="shared.css">
+<script>(function(){try{var t=localStorage.getItem('valheim-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script><link rel="stylesheet" href="shared.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Eikthyr Boss Guide — Valheim First Boss Strategy, Summoning & Rewards","description":"Complete Eikthyr boss guide for Valheim. How to summon and beat the first Forsaken boss in the Meadows.","author":{"@type":"Organization","name":"Valheim Guides"},"datePublished":"2026-07-17","dateModified":"2026-07-17","publisher":{"@type":"Organization","name":"Valheim Guides"},"mainEntityOfPage":"https://valheims.com/eikthyr-guide.html"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://valheims.com/"},{"@type":"ListItem","position":2,"name":"Boss Order","item":"https://valheims.com/boss-order.html"},{"@type":"ListItem","position":3,"name":"Eikthyr","item":"https://valheims.com/eikthyr-guide.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you summon Eikthyr in Valheim?","acceptedAnswer":{"@type":"Answer","text":"Place 2 Deer Trophies on Eikthyr's Mystical Altar in the Meadows. Deer Trophies drop from Deer when killed. The altar is a large stone formation with a red glowing runestone — interact with the runestone to mark its location on your map."}},{"@type":"Question","name":"What is the best weapon to beat Eikthyr?","acceptedAnswer":{"@type":"Answer","text":"A Flint Spear or Crude Bow with Flint Arrows are the best weapons against Eikthyr. The bow lets you deal damage from range while kiting, and the spear allows quick melee hits between his attacks. A Wood Shield helps block his close-range strikes."}},{"@type":"Question","name":"What does Eikthyr's Forsaken Power do?","acceptedAnswer":{"@type":"Answer","text":"Eikthyr's Forsaken Power reduces stamina consumption for running and jumping by 60% for 5 minutes. It's excellent for exploration, corpse runs, and traversing large distances without resting."}}]}</script>
@@ -196,6 +196,18 @@
   var btn = document.getElementById('backTop');
   window.addEventListener('scroll', function() { btn.classList.toggle('visible', window.scrollY > 500); });
   btn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  var dropdownLinks = document.querySelectorAll('.nav-links .dropdown > a');
+  dropdownLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        var item = link.parentElement;
+        var wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.nav-links .dropdown.open').forEach(function(o) { o.classList.remove('open'); });
+        if (!wasOpen) item.classList.add('open');
+      }
+    });
+  });
 })();
 function handleFeedback(type) {
   document.querySelectorAll('.feedback-btn').forEach(function(b) { b.classList.remove('voted'); });

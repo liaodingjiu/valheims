@@ -927,6 +927,7 @@ code {
   .sidebar { width: 100%; position: static; }
   .guide-list-item { flex-direction: column; text-align: center; }
   .nav-links .dropdown-menu { position: static; box-shadow: none; }
+  .nav-links .dropdown.open .dropdown-menu { display: block; }
 .grid-2, .grid-3, .grid-4, .hub-grid { grid-template-columns: 1fr; }
   .hero h1 { font-size: 36px; }
   .section h2 { font-size: 26px; }

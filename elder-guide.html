@@ -3,7 +3,7 @@
 <head><meta charset="UTF-8"><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚔️</text></svg>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Elder Boss Guide — Valheim Second Boss Strategy, Summoning &amp; Rewards | Valheim Guides</title>
-<meta name="description" content="Complete The Elder boss guide for Valheim. How to summon and beat the second Forsaken boss. <a href="progression/">See where The Elder fits in Valheim progression →</a> in the Black Forest. Weakness to fire, best weapons, attack patterns, prep checklist, and Forsaken power.">
+<meta name="description" content="Complete The Elder boss guide for Valheim. How to summon and beat the second Forsaken boss, where The Elder fits in Valheim progression through the Black Forest. Weakness to fire, best weapons, attack patterns, prep checklist, and Forsaken power.">
 <meta name="keywords" content="Valheim Elder guide, Valheim second boss, The Elder summoning, Elder strategy, Valheim Black Forest boss, Elder Forsaken power, Elder fire arrows">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://valheims.com/elder-guide.html">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="article"><meta property="og:url" content="https://valheims.com/elder-guide.html">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="The Elder Boss Guide — Valheim Second Boss">
 <meta name="twitter:description" content="Complete Elder strategy guide with summoning, fire weakness, best weapons, and Forsaken power.">
-<link rel="stylesheet" href="shared.css">
+<script>(function(){try{var t=localStorage.getItem('valheim-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script><link rel="stylesheet" href="shared.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"The Elder Boss Guide — Valheim Second Boss Strategy, Summoning & Rewards","description":"Complete The Elder boss guide for Valheim. How to summon and beat the second Forsaken boss in the Black Forest.","author":{"@type":"Organization","name":"Valheim Guides"},"datePublished":"2026-07-17","dateModified":"2026-07-17","publisher":{"@type":"Organization","name":"Valheim Guides"},"mainEntityOfPage":"https://valheims.com/elder-guide.html"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://valheims.com/"},{"@type":"ListItem","position":2,"name":"Boss Order","item":"https://valheims.com/boss-order.html"},{"@type":"ListItem","position":3,"name":"The Elder","item":"https://valheims.com/elder-guide.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you summon The Elder in Valheim?","acceptedAnswer":{"@type":"Answer","text":"Place 3 Ancient Seeds on The Elder's Mystical Altar in the Black Forest. Ancient Seeds drop from Greydwarf Brutes and Greydwarf Shamans, and can also be found in chests inside Burial Chambers. The altar is a large stone platform surrounded by four indestructible pillars."}},{"@type":"Question","name":"What is The Elder weak to?","acceptedAnswer":{"@type":"Answer","text":"The Elder is weak to Fire damage. Fire Arrows are by far the best weapon — the fire DoT stacks and deals massive damage. He is resistant to Pierce damage, so regular arrows without fire are less effective. Avoid melee unless you have a Bronze Sword."}},{"@type":"Question","name":"What does The Elder's Forsaken Power do?","acceptedAnswer":{"@type":"Answer","text":"The Elder's Forsaken Power grants 60% increased damage to trees and ore deposits for 5 minutes (chopping and mining). It's the best power for resource gathering, logging, and mining — especially paired with the Antler Pickaxe for copper/tin runs."}}]}</script>
@@ -79,7 +79,7 @@
 <section class="hero"><h1>The Elder Boss Guide — Valheim's Second Forsaken</h1><p>The Elder is the second Forsaken boss, found in the Black Forest. A colossal tree-like entity that summons roots from the ground and fires devastating vine projectiles. This guide covers summoning, his critical fire weakness, attack patterns, best weapons, and how to claim the best resource-gathering power in the game.</p>
 <div class="hero-stats"><div class="hero-stat"><div class="val">2nd</div><div class="lbl">Boss Order</div></div><div class="hero-stat"><div class="val">Black Forest</div><div class="lbl">Biome</div></div><div class="hero-stat"><div class="val">3</div><div class="lbl">Ancient Seeds</div></div><div class="hero-stat"><div class="val">🔥</div><div class="lbl">Fire Weakness</div></div></div></section>
 <figure class="hero-image">
-  <img src="images/valheim-black-forest-entrance.webp" alt="A Viking warrior entering the dark Black Forest biome in Valheim." width="1200" height="675" loading="eager" loading="lazy" width="1200" height="675">
+  <img src="images/valheim-black-forest-entrance.webp" alt="A Viking warrior entering the dark Black Forest biome in Valheim." width="1200" height="675" loading="eager" fetchpriority="high" decoding="async">
 </figure>
 
 <nav class="toc" aria-label="Table of contents"><h2>On This Page</h2><ol><li><a href="#summon">How to Summon The Elder</a></li><li><a href="#stats">Stats &amp; Weaknesses</a></li><li><a href="#attacks">Attack Patterns</a></li><li><a href="#strategy">Best Weapons &amp; Strategy</a></li><li><a href="#prep">Pre-Fight Preparation</a></li><li><a href="#reward">Forsaken Power &amp; Rewards</a></li><li><a href="#after">After the Fight</a></li></ol></nav>
@@ -207,6 +207,18 @@
   var btn = document.getElementById('backTop');
   window.addEventListener('scroll', function() { btn.classList.toggle('visible', window.scrollY > 500); });
   btn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  var dropdownLinks = document.querySelectorAll('.nav-links .dropdown > a');
+  dropdownLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        var item = link.parentElement;
+        var wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.nav-links .dropdown.open').forEach(function(o) { o.classList.remove('open'); });
+        if (!wasOpen) item.classList.add('open');
+      }
+    });
+  });
 })();
 function handleFeedback(type) {
   document.querySelectorAll('.feedback-btn').forEach(function(b) { b.classList.remove('voted'); });

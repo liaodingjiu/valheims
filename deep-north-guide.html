@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Valheim Deep North Biome Guide 2026">
 <meta name="twitter:description" content="Complete guide to the final Valheim biome — Deep North enemies, weapons, armor, and crafting.">
-<link rel="stylesheet" href="shared.css">
+<script>(function(){try{var t=localStorage.getItem('valheim-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script><link rel="stylesheet" href="shared.css">
 
 <script type="application/ld+json">
 {
@@ -468,8 +468,6 @@
 
 <div class="tip-box"><strong>🔄 Keep a backup portal at your Ashlands base:</strong> The Deep North is the most punishing biome yet. If you die without a portal, the corpse run is brutal. Always keep a spare boat and backup gear at your nearest southern outpost.</div>
 
-</section>
-
 <!-- FAQ -->
 <h2>Frequently Asked Questions</h2>
 <div class="faq">
@@ -597,6 +595,18 @@
   var btn = document.getElementById('backTop');
   window.addEventListener('scroll', function() { btn.classList.toggle('visible', window.scrollY > 500); });
   btn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  var dropdownLinks = document.querySelectorAll('.nav-links .dropdown > a');
+  dropdownLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        var item = link.parentElement;
+        var wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.nav-links .dropdown.open').forEach(function(o) { o.classList.remove('open'); });
+        if (!wasOpen) item.classList.add('open');
+      }
+    });
+  });
 })();
 function handleFeedback(type) {
   document.querySelectorAll('.feedback-btn').forEach(function(b) { b.classList.remove('voted'); });

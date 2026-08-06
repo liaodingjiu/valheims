@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Valheim Base Building Guide 2026">
 <meta name="twitter:description" content="Structural integrity, best base locations, workshop layout, defense — all covered.">
-<link rel="stylesheet" href="shared.css">
+<script>(function(){try{var t=localStorage.getItem('valheim-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script><link rel="stylesheet" href="shared.css">
 
 <!-- Schema.org JSON-LD: Article -->
 <script type="application/ld+json">
@@ -188,7 +188,7 @@
   </div>
 </section>
 <figure class="hero-image">
-  <img src="images/valheim-base-interior.webp" alt="Interior of a Valheim Viking longhouse with boss trophies mounted on the walls." width="1200" height="675" loading="eager" loading="lazy" width="1200" height="675">
+  <img src="images/valheim-base-interior.webp" alt="Interior of a Valheim Viking longhouse with boss trophies mounted on the walls." width="1200" height="675" loading="eager" fetchpriority="high" decoding="async">
 </figure>
 
 
@@ -797,6 +797,18 @@
   var btn = document.getElementById('backTop');
   window.addEventListener('scroll', function() { btn.classList.toggle('visible', window.scrollY > 500); });
   btn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  var dropdownLinks = document.querySelectorAll('.nav-links .dropdown > a');
+  dropdownLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        var item = link.parentElement;
+        var wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.nav-links .dropdown.open').forEach(function(o) { o.classList.remove('open'); });
+        if (!wasOpen) item.classList.add('open');
+      }
+    });
+  });
 })();
 function handleFeedback(type) {
   document.querySelectorAll('.feedback-btn').forEach(function(b) { b.classList.remove('voted'); });
