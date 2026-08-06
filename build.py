@@ -74,17 +74,18 @@ def build():
 
 def submit_indexnow(count):
     urls = [
+        "https://valheims.com/sitemap.xml",
         "https://valheims.com/",
         "https://valheims.com/progression/",
         "https://valheims.com/biomes/",
         "https://valheims.com/multiplayer/",
-        "https://valheims.com/boss-order.html",
-        "https://valheims.com/best-weapons.html",
-        "https://valheims.com/beginner-guide.html",
-        "https://valheims.com/building-guide.html",
-        "https://valheims.com/biome-guide.html",
-        "https://valheims.com/server-setup.html",
-        "https://valheims.com/crossplay-guide.html",
+        "https://valheims.com/boss-order",
+        "https://valheims.com/best-weapons",
+        "https://valheims.com/beginner-guide",
+        "https://valheims.com/building-guide",
+        "https://valheims.com/biome-guide",
+        "https://valheims.com/server-setup",
+        "https://valheims.com/crossplay-guide",
     ]
     data = json.dumps({
         "host": "valheims.com",
