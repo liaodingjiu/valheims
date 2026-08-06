@@ -89,10 +89,6 @@ def update_sitemap():
             loc = loc[1:]  # repair a previously broken relative URL
         elif loc.startswith("/"):
             loc = "https://valheims.com" + loc
-        if loc.endswith(".html"):
-            loc = loc[:-5]
-            if loc.endswith("/index"):
-                loc = loc[:-6] + "/"
         return f"<loc>{loc}</loc>"
 
     today = datetime.date.today().isoformat()
